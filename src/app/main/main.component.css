@@ -1,0 +1,13 @@
+main {
+    height: fit-content;
+    text-align: center;
+    padding: 8px 4px 0 4px;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.home-popular h2 {
+    margin: 36px 0 0 0;
+}

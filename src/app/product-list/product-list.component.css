@@ -1,0 +1,141 @@
+/* -------------------- */
+
+
+
+.home-popular {
+    margin-bottom: 40px;
+}
+
+h2 {
+    line-height: 60px;
+}
+
+.home-popular h2 {
+    margin: 36px 0 0 0;
+}
+
+
+
+
+.home-popular h2 {
+    margin: 36px 0 0 0;
+}
+
+.home-popular-ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.home-popular-card-li {
+    height: 300px;
+    width: 240px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(0px, 0px);
+    transition: 0.4s;
+}
+
+.home-popular-card-li:hover {
+    transform: translate(0px, -6px);
+    transition: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-popular-card-a {
+    text-decoration: none;
+    color: #585858;
+}
+
+
+
+
+/* PRODUCT LIST */
+
+.checked {
+    color: tomato;
+}
+
+.category-container {
+    margin-bottom: 40px;
+}
+
+.category-container-ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-product-card-li {
+    position: relative;
+    height: 340px;
+    width: 270px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(0px, 0px);
+    transition: 0.4s;
+}
+
+.category-product-card-li:hover {
+    transform: translate(0px, -6px);
+    transition: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-description {
+    text-align: left;
+    padding: 0 8px;
+}
+
+.product-description p {
+    font-size: 20px;
+}
+
+.satoshi {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.favourite {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.favourite:hover {
+    background-color: rgb(255, 215, 215);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category-product-card-li:hover>.favourite {
+    display: flex;
+}
+
+.product-description-seller,
+.product-description-seller-name,
+.seller-items-quantity {
+    font-size: 12px;
+}
+
+.seller-image {
+    position: absolute;
+    overflow: hidden;
+    bottom: 12px;
+    right: 12px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid tomato;
+    border-radius: 50%;
+}
