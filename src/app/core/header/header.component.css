@@ -1,4 +1,4 @@
-.logo {
+/* .logo {
     font-weight: 1000;
     font-size: 32px;
     color: tomato;
@@ -8,25 +8,24 @@
 .logo a {
     text-decoration: none;
     color: tomato;
-}
+} */
 
 .logo img {
     height: 80px;
 }
 
 .top,
-.client-ul,
-.menu {
+.client-ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .top {
     padding: 4px;
-    gap: 16px;
-    border-bottom: 2px solid #ccc;
+    gap: 8px;
+    border-bottom: 1px solid #ccc;
 }
 
 form {
@@ -69,14 +68,18 @@ form {
 }
 
 .client-ul {
-    gap: 20px;
+    gap: 10px;
     font-size: 24px;
 }
 
 .client-li {
-    padding: 6px 10px;
+    padding: 6px 8px;
     border-radius: 8px;
     text-align: center;
+}
+
+.client-li .fa-solid {
+    font-size: 24px;
 }
 
 .client-li p {

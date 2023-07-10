@@ -4,10 +4,10 @@
     <div class="register">
         <form class="login-form" method="post">
             <label for="email">Email</label>
-            <input type="text" name="surname" placeholder="Please, enter your email address">
+            <input type="text" name="surname" placeholder="Please, enter your email address" #inputEmail>
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Please, enter your password">
-            <input type="submit" value="Login">
+            <input type="password" name="password" placeholder="Please, enter your password" #inputPassword>
+            <button (click)="login(inputEmail.value, inputPassword.value)">Login</button>
         </form>
         <p>If you are not a registered user, please go to our <a href="register.html">Registration page</a>.</p>
     </div>

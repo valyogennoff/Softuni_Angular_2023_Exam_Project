@@ -10,6 +10,8 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { BlogPostsListComponent } from './blog-posts-list/blog-posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+import { UserModule } from './user/user.module';
+import { CategoryModule } from './category/category.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SharedModule } from './shared/shared.module';
     CoreModule,
     HttpClientModule,
     SharedModule,
+    UserModule,
+    CategoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

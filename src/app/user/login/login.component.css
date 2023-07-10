@@ -24,9 +24,9 @@ textarea {
 }
 
 
-input[type=submit] {
+button {
     width: 100%;
-    background-color: #f18f33;
+    background-color: tomato;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

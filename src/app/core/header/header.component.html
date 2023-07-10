@@ -1,8 +1,9 @@
 <header>
     <section class="top">
-        <div class="logo"><a href="index.html"><img src="https://www.yippeecode.com/wp-content/uploads/2020/06/angular-512-1-150x150.png" alt="Logo"></a></div>
+        <div class="logo"><a routerLink="/home"><img src="https://www.yippeecode.com/wp-content/uploads/2020/06/angular-512-1-150x150.png" alt="Logo"></a></div>
         <ul class="client-ul" role='list'>
-            <li class="client-li"><a href=""><i class="fa-solid fa-shop"></i><p>Categories</p></a></li>
+            <li class="client-li"><a routerLink="categories/all"><i class="fa-solid fa-shop"></i><p>Categories</p></a></li>
+            <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-solid fa-folder-plus"></i><p>Add Category</p></a></li>
         </ul>
         <section class="search">
             <form action="" class="search-form">
@@ -12,8 +13,8 @@
         <section class="client-area">
             <ul class="client-ul" role='list'>
                 <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-square-plus"></i><p>Add Product</p></a></li>
-                <li class="client-li" *ngIf="!isLoggedIn"><a href=""><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></a></li>
-                <li class="client-li" *ngIf="!isLoggedIn"><a href=""><i class="fa-solid fa-user-plus"></i><p>Register</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/register"><i class="fa-solid fa-user-plus"></i><p>Register</p></a></li>
                 <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-circle-user"></i><p>My Profile</p></a></li>
                 <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-heart"></i><p>Saved</p></a></li>
                 <li class="client-li"><a href=""><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>

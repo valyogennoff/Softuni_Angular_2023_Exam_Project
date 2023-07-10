@@ -1,15 +1,8 @@
-.home-popular {
-    margin-bottom: 40px;
-}
-
 h2 {
-    line-height: 60px;
-    border-top: 1px solid #ccc;
+    line-height: 80px;
+    text-align: center;
 }
 
-.home-popular h2 {
-    margin: 36px 0 0 0;
-}
 
 .home-category-ul {
     display: inline-flex;
@@ -18,19 +11,17 @@ h2 {
     justify-content: center;
 }
 
-
 .home-category-card-li {
     height: 300px;
     width: 240px;
-    border: 1px solid lightgrey;
+    border: 1px solid salmon;
     border-radius: 12px;
     overflow: hidden;
     transform: translate(0px, 0px);
     transition: 0.4s;
     padding-top: 0;
-    background-color: rgb(241, 241, 241);
+    text-align: center;
 }
-
 
 .home-category-card-li img {
     height: 180px;
@@ -46,7 +37,6 @@ h2 {
 }
 
 .home-category-card-a {
-
     text-decoration: none;
-    color: #585858
+    color: #585858;
 }
