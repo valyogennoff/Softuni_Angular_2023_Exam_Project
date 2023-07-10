@@ -10,34 +10,38 @@ h2 {
     margin: 36px 0 0 0;
 }
 
-
-
-
-
-.home-popular-ul {
+.home-category-ul {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
 }
 
-.home-popular-card-li {
+.home-category-card-li {
     height: 300px;
     width: 240px;
-    border: 1px solid #ccc;
+    border: 2px solid salmon;
     border-radius: 12px;
     overflow: hidden;
     transform: translate(0px, 0px);
     transition: 0.4s;
+    padding-top: 0;
 }
 
-.home-popular-card-li:hover {
+.home-category-card-li img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(0px, -28px);
+}
+
+.home-category-card-li:hover {
     transform: translate(0px, -6px);
     transition: 0.4s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.home-popular-card-a {
+.home-category-card-a {
     text-decoration: none;
     color: #585858;
 }

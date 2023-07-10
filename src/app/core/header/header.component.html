@@ -2,7 +2,7 @@
     <section class="top">
         <div class="logo"><a href="index.html"><img src="https://www.yippeecode.com/wp-content/uploads/2020/06/angular-512-1-150x150.png" alt="Logo"></a></div>
         <ul class="client-ul" role='list'>
-            <li class="client-li"><a href="category.html"><i class="fa-solid fa-shop"></i><p>Categories</p></a></li>
+            <li class="client-li"><a href=""><i class="fa-solid fa-shop"></i><p>Categories</p></a></li>
         </ul>
         <section class="search">
             <form action="" class="search-form">
@@ -11,12 +11,13 @@
         </section>
         <section class="client-area">
             <ul class="client-ul" role='list'>
-                <li class="client-li" *ngIf=""><i class="fa-regular fa-square-plus"></i><p>Add Product</p></li>
-                <li class="client-li"><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></li>
-                <li class="client-li" *ngIf=""><i class="fa-regular fa-circle-user"></i><p>My Profile</p></li>
-                <li class="client-li" *ngIf=""><i class="fa-regular fa-heart"></i><p>Saved</p></li>
-                <li class="client-li"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></li>
-                <li class="client-li" *ngIf=""><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></li>
+                <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-square-plus"></i><p>Add Product</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a href=""><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a href=""><i class="fa-solid fa-user-plus"></i><p>Register</p></a></li>
+                <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-circle-user"></i><p>My Profile</p></a></li>
+                <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-heart"></i><p>Saved</p></a></li>
+                <li class="client-li"><a href=""><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
+                <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a></li>
             </ul>
         </section>
     </section>
