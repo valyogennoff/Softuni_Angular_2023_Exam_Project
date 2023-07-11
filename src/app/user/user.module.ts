@@ -11,7 +11,7 @@ import { UserRoutingModule } from './user-routing.module';
   declarations: [
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
