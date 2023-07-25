@@ -85,8 +85,9 @@
     right: 8px;
 }
 
-.category-product-card-li:hover>.favourite {
+.category-product-card-li:hover .favourite {
     display: flex;
+    color: tomato;
 }
 
 .favourite:hover {

@@ -2,11 +2,11 @@
 <section class="home-popular">
         <ul *ngFor="let product of productList" class="product-container-ul" >
             <!-- Loader / Spinner -->
-            <li *ngIf="isLoading" class="category-product-card-li">
-                <app-loader />
-            </li>
+            <!-- <li *ngIf="!globalLoaderService.isHidden" class="category-product-card-li">
+                <app-global-loader />
+            </li> -->
 
-            <li *ngIf="!isLoading" class="category-product-card-li">
+            <li class="category-product-card-li">
                 <a href="" class="home-product-card-a">
                     <img src="{{product.imgUrl}}" alt="">
                     <div class="product-description">
@@ -23,7 +23,7 @@
                             <span class="product-description-seller-name">{{product.userId.username}}</span> <span class="seller-items-quantity"> ({{product.userId.posts.length}} items)</span>
                         </p>
                     </div>
-                    <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="favourite"><i class="fa-solid fa-heart"></i></div>
                     <div class="seller-image"><img src="{{product.userId.photoUrl}}" alt="Merchant's photo"></div>
                 </a>
             </li>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,10 +10,11 @@ import { MainComponent } from './main/main.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { BlogPostsListComponent } from './blog-posts-list/blog-posts-list.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { CategoryModule } from './category/category.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { CategoryModule } from './category/category.module';
     MainComponent,
     ProductListComponent,
     CategoryListComponent,
-    BlogPostsListComponent
+    BlogPostsListComponent,
+    NotFoundComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { CategoryModule } from './category/category.module';
     HttpClientModule,
     SharedModule,
     UserModule,
-    CategoryModule
+    CategoryModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

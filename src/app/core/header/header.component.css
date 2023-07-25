@@ -1,4 +1,4 @@
-/* .logo {
+.logo {
     font-weight: 1000;
     font-size: 32px;
     color: tomato;
@@ -8,24 +8,26 @@
 .logo a {
     text-decoration: none;
     color: tomato;
-} */
+}
 
 .logo img {
     height: 80px;
 }
 
 .top,
-.client-ul {
+.client-ul,
+.menu {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    color: tomato;
 }
 
 .top {
     padding: 4px;
-    gap: 8px;
-    border-bottom: 1px solid #ccc;
+    gap: 16px;
+    border-bottom: 2px solid #ccc;
 }
 
 form {
@@ -36,11 +38,12 @@ form {
 #search {
     height: 40px;
     width: 550px;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-right: 0;
     padding-left: 20px;
+    transition: 0.4s;
 }
 
 #search:focus {
@@ -49,13 +52,14 @@ form {
 
 #search:focus+.submit {
     background-color: tomato;
+    border-color: tomato
 }
 
 .submit {
     background-color: #fff;
     height: 40px;
     width: 50px;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-left: 0;
@@ -68,18 +72,15 @@ form {
 }
 
 .client-ul {
-    gap: 10px;
+    gap: 24px;
     font-size: 24px;
+    transition: 0.4s;
 }
 
 .client-li {
-    padding: 6px 8px;
+    padding: 6px 10px;
     border-radius: 8px;
     text-align: center;
-}
-
-.client-li .fa-solid {
-    font-size: 24px;
 }
 
 .client-li p {
@@ -89,9 +90,65 @@ form {
 
 .client-li a {
     text-decoration: none;
-    color: rgb(73, 73, 73);
+    color: tomato;
 }
 
 .client-li:hover {
     background-color: aliceblue;
+}
+
+.menu {
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-item {
+    border: 1px solid #ffffff;
+    border-bottom: 3px solid white;
+    padding: 2px 10px;
+    transition: 0.4s;
+}
+
+.menu-item:hover {
+    border-bottom: 3px solid rgb(255, 94, 0);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (max-width: 1052px) {
+
+    .search {
+        width: 400px;
+        transition: 0.4s;
+    }
+
+    #search {
+        width: 350px;
+        transition: 0.4s;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    .client-ul {
+        gap: 10px;
+        font-size: 18px;
+        transition: 0.4s;
+    }
+
+    .search {
+        width: 300px;
+        transition: 0.4s;
+    }
+
+    #search {
+        width: 250px;
+        transition: 0.4s;
+    }
 }
