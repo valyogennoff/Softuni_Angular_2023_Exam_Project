@@ -5,15 +5,19 @@ import { SingleComponent } from './single/single.component';
 
 
 const routes: Routes = [
+
+
     {
         path: 'categories',
         children: [
             {
                 path: 'all',
+                pathMatch: 'full',
                 component: AllComponent,
             },
             {
                 path: ':themeId',
+                pathMatch: 'full',
                 component: SingleComponent,
             }
         ]

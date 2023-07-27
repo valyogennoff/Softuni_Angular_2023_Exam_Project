@@ -8,15 +8,18 @@
 
             <li class="category-product-card-li">
                 <a href="" class="home-product-card-a">
-                    <img src="{{product.imgUrl}}" alt="">
+                    <img src="{{product.imgUrl}}" alt="{{product.text}}">
                     <div class="product-description">
                         <h3>{{product.text}}</h3>
                         <p class="catName">Category: {{product.themeId.themeName}}</p>
+                        <div class="stars">
+                            <star-rating [stars]="product.stars"/>
+                        </div>
+                        <!-- <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> -->
                         <p class="price-tag">$ {{product.price}}</p>
                         <!-- <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p> -->
                         <p class="product-description-seller">

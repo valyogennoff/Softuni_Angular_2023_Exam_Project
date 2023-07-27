@@ -15,6 +15,8 @@ import { UserModule } from './user/user.module';
 import { CategoryModule } from './category/category.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CartComponent } from './cart/cart.component';
+import { StarRatingComponent } from './partials/star-rating/star-rating.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CartComponent } from './cart/cart.component';
     CategoryListComponent,
     BlogPostsListComponent,
     NotFoundComponent,
-    CartComponent
+    CartComponent,
+    StarRatingComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

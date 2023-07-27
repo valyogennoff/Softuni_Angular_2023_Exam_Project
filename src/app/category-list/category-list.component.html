@@ -2,7 +2,7 @@
 <section class="home-category">
     <ul *ngFor="let category of categoryList" class="home-category-ul" >
         <li class="home-category-card-li">
-            <a href="" class="home-category-card-a">
+            <a routerLink="category._id" class="home-category-card-a">
             <img src="{{category.imgUrl}}" alt="">
             <h3>{{category.themeName}}</h3> 
             <p>Latest products added on {{category.updatedAt}}</p>

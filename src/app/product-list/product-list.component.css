@@ -58,12 +58,14 @@
     font-size: 20px;
 }
 
-/* .fa-star {
-
-} */
-
+/* 
 .fa-star,
 .price-tag {
+    transform: translate(0px, -28px);
+} */
+
+.stars {
+    margin-bottom: 0.2rem;
     transform: translate(0px, -28px);
 }
 

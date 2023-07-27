@@ -23,7 +23,7 @@ export class ProductListComponent implements OnInit {
     // this.isLoading = true;
 
     // setTimeout(() => {
-    this.apiService.getProducts(8).subscribe(
+    this.apiService.getProducts().subscribe(
       {
         next: (posts) => {
           console.log(posts[0]);

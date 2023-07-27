@@ -1,0 +1,148 @@
+.product-container {
+    margin-top: 60px;
+    display: flex;
+    gap: 60px;
+}
+
+.product-display {
+    display: flex;
+    justify-content: center;
+}
+
+.product-photo {
+    width: 470px;
+    height: 470px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-photo img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+
+}
+
+.big img {
+    width: 470px;
+    object-fit: cover;
+}
+
+.product-display .product-photo:nth-child(8) {
+    width: 190px;
+    height: 70px;
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+}
+
+.product-display .product-photo:nth-child(9) {
+    width: 270px;
+    height: 70px;
+    grid-column: 4 / span 1;
+    grid-row: 6 / span 1;
+}
+
+.product-description {
+    text-align: left;
+}
+
+.product-description-bottom-li {
+    padding-left: 22px;
+}
+
+.colours {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 24px;
+}
+
+.product-subscribe {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.fa-circle {
+    font-size: 28px;
+    margin-right: 12px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+
+.fa-circle:hover {
+    cursor: pointer;
+
+    border: 1px solid grey;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.fa-check {
+    margin-right: 8;
+}
+
+.fa-check,
+.fa-shield-halved,
+.fa-truck,
+.fa-globe {
+    width: 20px;
+    margin-right: 8px;
+    color: rgb(55, 171, 218);
+}
+
+.add-to-cart {
+    margin-top: 24px;
+    margin-bottom: 50px;
+    display: inline-block;
+    width: 100%;
+}
+
+.add-to-cart-btn {
+    background-color: tomato;
+    padding: 15px 80px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    /* margin-right: 12px; */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.shop-now-btn {
+    background-color: rgb(55, 171, 218);
+    padding: 15px 80px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+}
+
+.similar-products h2 {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .product-container {
+        display: block;
+    }
+
+
+    .product-photo {
+        width: 100%;
+
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .product-container {
+        display: block;
+    }
+}
