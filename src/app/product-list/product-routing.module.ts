@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './product-list.component';
+import { ProductPageComponent } from '../product-page/product-page.component';
 
 
 const routes: Routes = [
 
 
     {
-        path: 'products',
+        path: 'product',
         children: [
             {
-                path: 'all',
+                path: '',
                 pathMatch: 'full',
                 component: ProductListComponent,
             },
-            // {
-            //     path: ':themeId',
-            //     pathMatch: 'full',
-            //     component: SingleComponent,
-            // }
+            {
+                path: ':productId',
+                component: ProductPageComponent,
+            }
         ]
     },
 

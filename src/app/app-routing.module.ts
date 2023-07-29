@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './core/header/header.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,11 @@ const routes: Routes = [
   {
     path: 'search/:searchTerm',
     component: HeaderComponent,
-  }
+  },
+  {
+    path: 'product/:id',
+    component: ProductPageComponent
+  },
   // {
   //   path: '*',
   //   component: NotFoundComponent,

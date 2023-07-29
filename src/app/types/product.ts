@@ -6,6 +6,7 @@ export interface Product {
     text: string;
     userId: UserId;
     price: number;
+    description: string;
     tags?: string[];
     imgUrl: string;
     stars: number;

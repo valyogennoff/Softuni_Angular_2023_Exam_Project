@@ -66,7 +66,7 @@
 
 .stars {
     margin-bottom: 0.2rem;
-    transform: translate(0px, -28px);
+    transform: translate(0px, -24px);
 }
 
 .satoshi {
@@ -117,6 +117,7 @@
     border-radius: 50%;
 }
 
-h3 {
-    transform: translate(0px, -28px);
+h3,
+.price-tag {
+    transform: translate(0px, -24px);
 }

@@ -7,7 +7,7 @@
             </li> -->
 
             <li class="category-product-card-li">
-                <a href="" class="home-product-card-a">
+                <a routerLink="/product/{{product._id}}" class="home-product-card-a">
                     <img src="{{product.imgUrl}}" alt="{{product.text}}">
                     <div class="product-description">
                         <h3>{{product.text}}</h3>
@@ -24,6 +24,7 @@
                         <!-- <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p> -->
                         <p class="product-description-seller">
                             <span class="product-description-seller-name">{{product.userId.username}}</span> <span class="seller-items-quantity"> ({{product.userId.posts.length}} items)</span>
+                        {{product.description}}
                         </p>
                     </div>
                     <div class="favourite"><i class="fa-solid fa-heart"></i></div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Product } from '../types/product';
 import { GlobalLoaderService } from '../core/global-loader/global-loader.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -14,8 +15,10 @@ export class ProductListComponent implements OnInit {
   isLoading: boolean = true;
   constructor(
     private apiService: ApiService,
-    private globalLoaderService: GlobalLoaderService
-  ) {
+    activatedRoute: ActivatedRoute,
+    private globalLoaderService: GlobalLoaderService) {
+
+
   }
 
   ngOnInit(): void {
@@ -26,7 +29,7 @@ export class ProductListComponent implements OnInit {
     this.apiService.getProducts().subscribe(
       {
         next: (posts) => {
-          console.log(posts[0]);
+          console.log(posts[1]);
           this.productList = posts;
           // this.isLoading = false;
           this.globalLoaderService.hideLoader();
