@@ -11,6 +11,7 @@ export interface Product {
     img: string;
     // stars: number;
     model: string;
+    material: string;
     created_at: string;
     updatedAt: string;
     __v: number

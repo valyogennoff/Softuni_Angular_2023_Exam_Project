@@ -13,6 +13,7 @@ import { UserModule } from './user/user.module';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { NewProductComponent } from './product/new-product/new-product.component';
 import { CartModule } from './cart/cart.module';
+import { CartComponent } from './cart/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CartModule } from './cart/cart.module';
     BlogPostsListComponent,
     ProductListComponent,
     ProductPageComponent,
-    NewProductComponent
+    NewProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,6 @@ import { CartModule } from './cart/cart.module';
     CoreModule,
     HttpClientModule,
     UserModule,
-    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
