@@ -3,6 +3,7 @@ import { ApiService } from '../api.service';
 import { Product } from '../types/product';
 import { GlobalLoaderService } from '../core/global-loader/global-loader.service';
 import { ActivatedRoute } from '@angular/router';
+import { UserId } from '../types/user-id';
 
 @Component({
   selector: 'app-product-list',
@@ -12,6 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductListComponent implements OnInit {
   // title = 'Smart Angular Crafts';
   productList: Product[] = [];
+  _ownerId!: UserId;
   isLoading: boolean = true;
   constructor(
     private apiService: ApiService,
@@ -28,9 +30,9 @@ export class ProductListComponent implements OnInit {
     // setTimeout(() => {
     this.apiService.getProducts().subscribe(
       {
-        next: (posts) => {
-          console.log(posts[1]);
-          this.productList = posts;
+        next: (catalog) => {
+          console.log(catalog[1]);
+          this.productList = catalog;
           // this.isLoading = false;
           this.globalLoaderService.hideLoader();
         },

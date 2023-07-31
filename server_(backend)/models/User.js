@@ -1,7 +1,7 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
 
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     name: { 
         type: String, 
         required: true 
@@ -35,7 +35,11 @@ const userSchema = new Schema({
         type: String, 
         required: true 
     },
-});
+    items: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Item",
+    }],
+}, { timestamps: { createdAt: 'created_at' } });
 
 // userSchema.index({ email: 1}, {
 //     collation: {
@@ -44,6 +48,6 @@ const userSchema = new Schema({
 //     }
 // });
 
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

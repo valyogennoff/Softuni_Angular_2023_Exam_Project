@@ -9,15 +9,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private userService: UserService, private router: Router) {
-
-  }
+  constructor(private userService: UserService, private router: Router) { }
 
 
   login(email: string, password: string): void {
 
-    //TODO: for now not handling real data
     this.userService.login();
     this.router.navigate(['/']);
   }
+
 }

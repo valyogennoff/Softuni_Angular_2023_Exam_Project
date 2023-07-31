@@ -1,16 +1,16 @@
-import { Category } from "./category";
+// import { Category } from "./category";
 import { UserId } from "./user-id";
 
 export interface Product {
     _id: string;
-    text: string;
-    userId: UserId;
+    make: string;
+    _ownerId: UserId;
     price: number;
     description: string;
-    tags?: string[];
-    imgUrl: string;
-    stars: number;
-    themeId: Category;
+    // tags?: string[];
+    img: string;
+    // stars: number;
+    model: string;
     created_at: string;
     updatedAt: string;
     __v: number

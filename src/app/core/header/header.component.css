@@ -50,9 +50,17 @@ form {
     outline: none;
 }
 
+.fa-magnifying-glass {
+    color: gray;
+}
+
 #search:focus+.submit {
     background-color: tomato;
     border-color: tomato
+}
+
+#search:focus+.fa-magnifying-glass {
+    color: white;
 }
 
 .submit {
@@ -81,6 +89,7 @@ form {
     padding: 6px 10px;
     border-radius: 8px;
     text-align: center;
+    cursor: pointer;
 }
 
 .client-li p {
@@ -90,11 +99,16 @@ form {
 
 .client-li a {
     text-decoration: none;
+    color: gray;
+
+}
+
+.add-product a {
     color: tomato;
 }
 
 .client-li:hover {
-    background-color: aliceblue;
+    background-color: rgb(228, 243, 255);
 }
 
 .menu {

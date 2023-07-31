@@ -15,7 +15,7 @@ authController.post('/register',
                 throw errors;
             }
 
-            const token = await register(req.body.name, req.body.username, req.body.email, req.body.img, req.body.country, req.body.password);
+            const token = await register(req.body.name, req.body.username, req.body.email, req.body.img, req.body.country, req.body.password, req.body.items);
             res.json(token);
         } catch (error) {
             const message = parseError(error);

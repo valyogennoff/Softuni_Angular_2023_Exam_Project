@@ -8,10 +8,10 @@
 
             <li class="category-product-card-li">
                 <a routerLink="/product/{{product._id}}" class="home-product-card-a">
-                    <img src="{{product.imgUrl}}" alt="{{product.text}}">
+                    <img src="{{product.img}}" alt="{{product.make}}">
                     <div class="product-description">
-                        <h3>{{product.text}}</h3>
-                        <p class="catName">Category: {{product.themeId.themeName}}</p>
+                        <h3>{{product.make}}</h3>
+                        <!-- <p class="catName">Category: {{product.themeId.themeName}}</p> -->
                         <div class="stars">
                             <star-rating [stars]="product.stars"/>
                         </div>
@@ -23,12 +23,12 @@
                         <p class="price-tag">$ {{product.price}}</p>
                         <!-- <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p> -->
                         <p class="product-description-seller">
-                            <span class="product-description-seller-name">{{product.userId.username}}</span> <span class="seller-items-quantity"> ({{product.userId.posts.length}} items)</span>
+                            <span class="product-description-seller-name">{{product._ownerId.username}}</span> <span class="seller-items-quantity"> ({{product._ownerId.posts.length}} items)</span>
                         {{product.description}}
                         </p>
                     </div>
                     <div class="favourite"><i class="fa-solid fa-heart"></i></div>
-                    <div class="seller-image"><img src="{{product.userId.photoUrl}}" alt="Merchant's photo"></div>
+                    <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
                 </a>
             </li>
         </ul>

@@ -1,0 +1,24 @@
+
+        <ul *ngFor="let product of productList" class="product-container-ul" role='list'>
+            <li class="category-product-card-li">
+                <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                    <img src="{{product.img}}" alt="">
+                    <div class="product-description">
+                        <h3>{{product.make}}</h3>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                        <p class="product-description-seller">
+                            <span class="product-description-seller-name">{{product.created_at}}</span> <span class="seller-items-quantity">(28 items)</span>
+                        </p>
+                    </div>
+                    <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                </a>
+            </li>
+
+        </ul>
+

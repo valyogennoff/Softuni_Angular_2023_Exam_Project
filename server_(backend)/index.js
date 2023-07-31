@@ -8,7 +8,7 @@ const trimBody = require('./middlewares/trimBody');
 const session = require('./middlewares/session');
 
 mongoose.set('strictQuery', false);
-const connectionString = 'mongodb://127.0.0.1:27017/furniture3';
+const connectionString = 'mongodb://127.0.0.1:27017/angular-marketplace';
 
 start();
 

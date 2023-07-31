@@ -6,8 +6,8 @@ const itemSchema = new Schema({
     model: { type: String, required: true, minlength: [3, 'Model must be at least 3 characters long'] },
     year: {
         type: Number, required: true, validate: {
-            validator: value => value >= 1950 && value <= 2050,
-            message: 'Year must be between 1950 and 2050'
+            validator: value => value >= 1900 && value <= 2099,
+            message: 'Year must be after 1900'
         }
     },
     description: { type: String, required: true, minlength: [10, 'Description must be at least 10 characters long'] },
@@ -15,7 +15,7 @@ const itemSchema = new Schema({
     img: { type: String, required: [true, 'Image URL is required'] },
     material: { type: String, default: '' },
     _ownerId: { type: ObjectId, ref: 'User', required: true }
-});
+}, { timestamps: { createdAt: 'created_at' } });
 
 const Item = model('Item', itemSchema);
 

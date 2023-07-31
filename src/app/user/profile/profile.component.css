@@ -1,0 +1,128 @@
+.profile-info {
+    width: 540px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: rgb(250, 250, 250);
+}
+
+.profile-info span {
+    font-weight: 800;
+}
+
+.profile-img {
+    border-radius: 50%;
+    padding: 4px;
+    border: 1px solid gray
+}
+
+.my-info {
+    text-align: left;
+}
+
+.admin {
+    margin: 20px;
+}
+
+.checked {
+    color: orange;
+}
+
+.profile-container {
+    padding: 8px 50px;
+    margin-bottom: 40px;
+}
+
+.profile-container-ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-product-card-li {
+    position: relative;
+    height: 210px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(0px, 0px);
+    transition: 0.4s;
+}
+
+
+.profile-product-card-li img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile-product-card-li:hover {
+    transform: translate(0px, -6px);
+    transition: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-description {
+    text-align: left;
+    padding: 0 8px;
+}
+
+.product-description .fa-star {
+    font-size: 12px;
+}
+
+.product-description .price-tag {
+    font-size: 20px;
+}
+
+.satoshi {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.favourite {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.favourite:hover {
+    background-color: rgb(255, 215, 215);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category-product-card-li:hover>.favourite {
+    display: flex;
+}
+
+.product-description-seller,
+.product-description-seller-name,
+.seller-items-quantity,
+.product-description .catName {
+    font-size: 12px;
+}
+
+.seller-image {
+    position: absolute;
+    overflow: hidden;
+    bottom: 12px;
+    right: 12px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ff9900;
+    border-radius: 50%;
+}

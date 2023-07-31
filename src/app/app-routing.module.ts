@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HeaderComponent } from './core/header/header.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { NewProductComponent } from './product/new-product/new-product.component';
+import { ProductPageComponent } from './product/product-page/product-page.component';
+import { AuthActivate } from './core/guards/auth.activate';
+import { CartComponent } from './cart/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -16,17 +18,29 @@ const routes: Routes = [
     component: MainComponent,
   },
   {
-    path: 'search/:searchTerm',
-    component: HeaderComponent,
+    path: 'products',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: ProductListComponent,
+      },
+      {
+        path: ':itemId',
+        pathMatch: 'full',
+        component: ProductPageComponent,
+      }
+    ],
   },
   {
-    path: 'product/:id',
-    component: ProductPageComponent
+    path: 'new-product',
+    component: NewProductComponent,
+    canActivate: [AuthActivate],
   },
-  // {
-  //   path: '*',
-  //   component: NotFoundComponent,
-  // }
+  {
+    path: 'cart',
+    component: CartComponent,
+  }
 ];
 
 @NgModule({

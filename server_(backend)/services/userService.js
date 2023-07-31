@@ -7,7 +7,7 @@ const secret = 'q-90234xcwmietvuselrg';
 
 const tokenBlacklist = new Set();
 
-async function register(name, username, email, img, country, password) {
+async function register(name, username, email, img, country, password, items) {
     const existing = await User.findOne({ email })//.collation({ locale: 'simple', strength: 1 });
     if (existing) {
         throw new Error('Email is taken');
@@ -19,6 +19,7 @@ async function register(name, username, email, img, country, password) {
         email,
         img,
         country,
+        items,
         hashedPassword: await bcrypt.hash(password, 10)
     });
 

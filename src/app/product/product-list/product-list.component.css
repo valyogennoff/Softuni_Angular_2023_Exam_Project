@@ -1,0 +1,125 @@
+.home-popular {
+    margin-bottom: 40px;
+}
+
+.home-popular h2 {
+    line-height: 60px;
+    margin: 36px 0 0 0;
+}
+
+
+.checked {
+    color: tomato;
+}
+
+.product-container-ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 16px;
+    justify-content: space-between;
+}
+
+.category-product-card-li {
+    position: relative;
+    height: 320px;
+    width: 240px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translate(0px, 0px);
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+
+.category-product-card-li img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(0px, -28px);
+}
+
+.category-product-card-li:hover {
+    transform: translate(0px, -6px);
+    transition: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-product-card-a {
+    text-decoration: none;
+    color: #585858;
+}
+
+.product-description {
+    text-align: left;
+    padding: 0 8px;
+}
+
+.product-description p {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.fa-star,
+.price-tag {
+    transform: translate(0px, -28px);
+}
+
+.stars {
+    margin-bottom: 0.2rem;
+    transform: translate(0px, -24px);
+}
+
+.satoshi {
+    margin-top: -8px;
+    font-size: 14px;
+}
+
+.favourite {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.category-product-card-li:hover .favourite {
+    display: flex;
+    color: tomato;
+}
+
+.favourite:hover {
+    background-color: rgb(255, 215, 215);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product-description-seller,
+.product-description-seller-name,
+.seller-items-quantity,
+.product-description .catName {
+    font-size: 12px;
+    transform: translate(0px, -28px);
+}
+
+.seller-image img {
+    position: absolute;
+    overflow: hidden;
+    bottom: -10px;
+    right: 12px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid tomato;
+    border-radius: 50%;
+}
+
+h3,
+.price-tag {
+    transform: translate(0px, -24px);
+}

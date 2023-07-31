@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../types/user';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +10,7 @@ export class UserService {
   user: User | undefined;
   USER_KEY = '[user]';
 
-  get isLoggedIn(): boolean {
+  get isLogged(): boolean {
     return !!this.user;
   }
 
@@ -24,19 +25,15 @@ export class UserService {
 
   login(): void {
     this.user = {
-      email: 'valyogenov@gmail.com',
-      firstName: 'Valyo',
-      surName: 'Genov',
-      phoneNumber: '123-456-789',
-      password: '**********',
-    };
+      email: 'valyo@gmail.com',
+      name: 'Valyo',
+    }
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
-  }
+  };
 
   logout(): void {
     this.user = undefined;
     localStorage.removeItem(this.USER_KEY);
   }
-
 }
