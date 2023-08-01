@@ -7,8 +7,11 @@ const dataController = require('./controllers/dataController');
 const trimBody = require('./middlewares/trimBody');
 const session = require('./middlewares/session');
 
+const PORT = 3030;
+
 mongoose.set('strictQuery', false);
-const connectionString = 'mongodb://127.0.0.1:27017/angular-marketplace';
+// const connectionString = 'mongodb://127.0.0.1:27017/angular-marketplace';
+const connectionString = 'mongodb+srv://gennoff72admin:DTgkOvR9DOWT2OpG@cluster0.wm3duuw.mongodb.net/angular-marketplace';
 
 start();
 
@@ -30,5 +33,5 @@ async function start() {
     app.use('/users', authController);
     app.use('/data/catalog', dataController);
 
-    app.listen(3030, () => console.log('REST service started'));
+    app.listen(PORT, () => console.log('REST service started'));
 }

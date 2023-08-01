@@ -14,6 +14,12 @@ main {
     align-items: left;
 }
 
+.fa-angular {
+    transform: translate(0px, 3px);
+    color: rgb(90, 90, 90);
+    font-size: 28px;
+}
+
 
 input[type=text],
 input[type=password],

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,6 +9,6 @@ import { Router } from '@angular/router';
 })
 export class CartComponent {
 
-  constructor(private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
 }

@@ -58,6 +58,12 @@
     padding: 24px;
 }
 
+.product-page-price-tag {
+    font-weight: 600;
+    color: tomato;
+    font-size: 20px;
+}
+
 .product-subscribe {
     text-align: center;
     padding: 40px;
