@@ -13,7 +13,6 @@ import { UserModule } from './user/user.module';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { NewProductComponent } from './product/new-product/new-product.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
