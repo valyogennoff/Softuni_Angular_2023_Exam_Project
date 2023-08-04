@@ -2,12 +2,35 @@
     <h1>Log In</h1>
     <h2>to your <i class="fa-brands fa-angular"></i>ngular Crafts account</h2>
     <div class="register">
-        <form class="login-form" method="post">
-            <label for="email">Email</label>
-            <input type="text" name="surname" placeholder="Please, enter your email address" #inputEmail>
-            <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Please, enter your password" #inputPassword>
-            <button (click)="login(inputEmail.value, inputPassword.value)">Login</button>
+        <form class="login-form" #loginForm="ngForm" (ngSubmit)="loginHandler(loginForm)">
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Please, enter your email address" #inputEmail ngModel email required #emailInput="ngModel">
+            </div>
+
+            <!-- Email Errors -->
+            <div class="email-required" *ngIf="emailInput.touched">
+            <span *ngIf="emailInput.errors?.['required']">Email is required!</span>
+            <span *ngIf="emailInput.errors?.['email']">Invalid Email!</span>
+        </div>
+            <!-- PASS -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Please, enter your password" #inputPassword ngModel #passwordInput="ngModel" [appMinCount]="8" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,20})">
+            </div>
+
+            <!-- Pass Errors -->
+            <div class="email-required" *ngIf="passwordInput.touched">
+                <span *ngIf="passwordInput.errors?.['pattern']">Password should: <br>- be at between 8 and 20 characters <br>- include at least 1 small letter, <br>- one Capital letter, <br>- one number <br>- and 1 special symbol.</span>
+            </div>
+
+            <button class="login-btn"
+            [style]="{backgroundColor: loginForm.invalid ? 'grey' : 'tomato'}">Login</button>
+            <!-- [style]="{backgroundColor: loginForm.invalid ? 'grey' : 'tomato'}">Login</button> -->
+
+            <!-- <button (click)="login(inputEmail.value, inputPassword.value)">Test Login</button> -->
         </form>
         <p>If you are not a registered user, please go to our <a routerLink="/register">Registration page</a>.</p>
     </div>

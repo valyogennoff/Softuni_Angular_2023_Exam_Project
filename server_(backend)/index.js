@@ -10,8 +10,9 @@ const session = require('./middlewares/session');
 const PORT = 3030;
 
 mongoose.set('strictQuery', false);
-// const connectionString = 'mongodb://127.0.0.1:27017/angular-marketplace';
-const connectionString = 'mongodb+srv://gennoff72admin:DTgkOvR9DOWT2OpG@cluster0.wm3duuw.mongodb.net/angular-marketplace';
+const connectionString = 'mongodb://127.0.0.1:27017/angular-marketplace';
+// const connectionString = 'mongodb+srv://gennoff72admin:DTgkOvR9DOWT2OpG@cluster0.wm3duuw.mongodb.net';
+
 
 start();
 

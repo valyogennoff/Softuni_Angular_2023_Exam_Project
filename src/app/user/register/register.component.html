@@ -2,20 +2,45 @@
     <h1>Register</h1>
     <h2>with <i class="fa-brands fa-angular"></i>ngular Crafts</h2>
     <div class="register">
-        <form class="regform" method="post">
+        <form class="regform" #registerForm="ngForm" (ngSubmit)="registerHandler(registerForm)">
+
+            <!-- FIRST NAME -->
             <label for="firstName">First name</label>
-            <input type="text" name="firstName"  placeholder="Please, enter your first name">
+            <input type="text" name="firstName"  placeholder="Please, enter your first name" ngModel required #firstNameInput="ngModel">
+            <div class="input-required" *ngIf="firstNameInput.touched">
+                <span *ngIf="firstNameInput.errors?.['required']">Name is required!</span>
+            </div>
+
+            <!-- SURNAME -->
             <label for="surname">Surname</label>
-            <input type="text" name="surname" placeholder="Please, enter your surname">
+            <input type="text" name="surname" placeholder="Please, enter your surname" ngModel required #surnameInput="ngModel">
+            <div class="input-required" *ngIf="surnameInput.touched">
+                <span *ngIf="surnameInput.errors?.['required']">Surname is required!</span>
+            </div>
+
+            <!-- USERNAME -->
             <label for="username">Username</label>
-            <input type="text" name="username" placeholder="Please, enter a username">
+            <input type="text" name="username" placeholder="Please, enter a username" ngModel required #usernameInput="ngModel">
+            <div class="input-required" *ngIf="usernameInput.touched">
+                <span *ngIf="usernameInput.errors?.['required']">Username is required!</span>
+            </div>
+
+            <!-- EMAIL -->
             <label for="email">Email</label>
-            <input type="text" name="email" placeholder="Please, enter your email address">
+            <input type="text" name="email" placeholder="Please, enter your email address" ngModel email required #emailInput="ngModel">
+            <div class="input-required" *ngIf="emailInput.touched">
+                <span *ngIf="emailInput.errors?.['required']">Email is required!</span>
+                <span *ngIf="emailInput.errors?.['email']">Invalid Email!</span>
+            </div>
+
+            <!-- IMAGE -->
             <label for="img">Photo (URL)</label>
-            <input type="text" name="img" value="https://vectorified.com/images/user-icon-34.jpg" placeholder="https://vectorified.com/images/user-icon-34.jpg">
+            <input type="text" name="img" value="https://vectorified.com/images/user-icon-34.jpg" ngModel required #imageInput="ngModel">
+
+            <!-- COUNTRY -->
             <label for="country">Country</label>
-            <select class="form-select" id="country" name="country" placeholder="Select country">
-                <option>select country</option>
+            <select class="form-select" id="country" name="country" placeholder="Select country" ngModel required #countryInput="ngModel">
+                <option></option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Aland Islands</option>
                 <option value="AL">Albania</option>
@@ -50,7 +75,7 @@
                 <option value="BR">Brazil</option>
                 <option value="IO">British Indian Ocean Territory</option>
                 <option value="BN">Brunei Darussalam</option>
-                <option value="BG">Bulgaria</option>
+                <option selected value="BG">Bulgaria</option>
                 <option value="BF">Burkina Faso</option>
                 <option value="BI">Burundi</option>
                 <option value="KH">Cambodia</option>
@@ -269,11 +294,23 @@
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabwe</option>
             </select>
+            <div class="input-required" *ngIf="countryInput.touched">
+                <span *ngIf="countryInput.errors?.['required']">Please, select a country!</span>
+            </div>
+
+            <!-- PASSWORD -->
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Please, enter a password">
+            <input type="password" name="password" placeholder="Please, enter a password" #inputPassword ngModel #passwordInput="ngModel" [appMinCount]="6">
+            <div class="input-required" *ngIf="passwordInput.touched">
+                <span *ngIf="passwordInput.errors?.['appMinCount']">Password must be at least {{passwordInput.errors?.['appMinCount']}} characters!</span>
+            </div>
+
+            <!-- REPEAT PASSWORD -->
             <label for="repeat-pass">Repeat Password</label>
-            <input type="password" name="repeat-pass" placeholder="Please, repeat your password">
-            <input type="submit" value="Register">
+            <input type="password" name="repass" placeholder="Please, repeat your password">
+
+            <!-- SUBMIT -->
+            <button>Register</button>
         </form>
         <p>If you are a registered user, please go to our <a routerLink="/login">Login page</a>.</p>
     </div>

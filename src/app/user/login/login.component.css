@@ -2,7 +2,6 @@ main {
     text-align: center;
 }
 
-
 .register {
     display: flex;
     margin: 4px auto 40px auto;
@@ -12,6 +11,7 @@ main {
     padding: 20px;
     flex-wrap: wrap;
     align-items: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .fa-angular {
@@ -20,20 +20,32 @@ main {
     font-size: 28px;
 }
 
-
 input[type=text],
 input[type=password],
 select,
 textarea {
     width: 100%;
     padding: 12px 20px;
-    margin: 2px 12px 8px 0px;
-    display: inline-block;
+    /* margin: 2px 12px 8px 0px; */
+    /* display: inline-block; */
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
 }
 
+.email-required {
+    font-size: 13px;
+    line-height: 1.1;
+    color: red;
+    padding-left: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+    display: inline-block;
+}
 
 button {
     width: 100%;
@@ -51,4 +63,18 @@ label {
     width: 100%;
     text-align: left;
     padding: 12px 20px 0 20px;
+}
+
+input.ng-valid {
+    border-left: 8px solid rgb(0, 255, 0);
+    width: 380px;
+}
+
+input.ng-invalid {
+    border-left: 8px solid tomato;
+    width: 380px;
+}
+
+input.ng-invalid+.login-btn {
+    background-color: grey;
 }
