@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void { }
@@ -17,24 +18,25 @@ export class RegisterComponent implements OnInit {
 
   ngAfterViewInit(): void { }
 
-  registerHandler(form: NgForm): void {
+  register(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-    const value: { firstname: string; surname: string; username: string; email: string; img: string; country: string; password: string; repass: string } = form.value;
+    const { name, username, email, img, country, password, repass } = form.value;
 
+    this.userService.register(name, username, email, img, country, password, repass).subscribe(() => {
+      form.setValue({
+        name: '',
+        username: '',
+        email: '',
+        img: '',
+        country: '',
+        password: '',
+        repass: '',
+      });
+      this.router.navigate(['/']);
+    })
 
-    form.setValue({
-      firstname: '',
-      surname: '',
-      username: '',
-      email: '',
-      img: '',
-      country: '',
-      password: '',
-      repass: '',
-    });
-    this.router.navigate(['/']);
   }
 
 }

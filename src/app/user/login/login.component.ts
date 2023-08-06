@@ -8,32 +8,32 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit(): void { }
+  // ngOnInit(): void { }
+  // ngAfterViewInit(): void { }
+  // login(email: string, password: string): void {
+  //   this.router.navigate(['/']);
+  // }
 
-
-  ngAfterViewInit(): void { }
-  login(email: string, password: string): void {
-
-    this.userService.login();
-    this.router.navigate(['/']);
-  }
-
-  loginHandler(form: NgForm): void {
+  login(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-    const value: { email: string; password: string } = form.value;
+    const { email, password } = form.value;
+    this.userService.login(email, password).subscribe(() => {
 
+      form.setValue({
+        email: '',
+        password: '',
+      });
+      this.router.navigate(['/']);
 
-    form.setValue({
-      email: '',
-      password: '',
     });
-    this.router.navigate(['/']);
+
+
   }
 
 }

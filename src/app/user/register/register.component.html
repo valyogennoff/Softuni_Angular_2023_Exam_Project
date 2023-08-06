@@ -2,21 +2,21 @@
     <h1>Register</h1>
     <h2>with <i class="fa-brands fa-angular"></i>ngular Crafts</h2>
     <div class="register">
-        <form class="regform" #registerForm="ngForm" (ngSubmit)="registerHandler(registerForm)">
+        <form class="regform" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
 
             <!-- FIRST NAME -->
-            <label for="firstName">First name</label>
-            <input type="text" name="firstName"  placeholder="Please, enter your first name" ngModel required #firstNameInput="ngModel">
-            <div class="input-required" *ngIf="firstNameInput.touched">
-                <span *ngIf="firstNameInput.errors?.['required']">Name is required!</span>
+            <label for="name">First name</label>
+            <input type="text" name="name"  placeholder="Please, enter your first name" ngModel required #nameInput="ngModel">
+            <div class="input-required" *ngIf="nameInput.touched">
+                <span *ngIf="nameInput.errors?.['required']">Name is required!</span>
             </div>
 
-            <!-- SURNAME -->
+            <!-- /* SURNAME */
             <label for="surname">Surname</label>
             <input type="text" name="surname" placeholder="Please, enter your surname" ngModel required #surnameInput="ngModel">
             <div class="input-required" *ngIf="surnameInput.touched">
                 <span *ngIf="surnameInput.errors?.['required']">Surname is required!</span>
-            </div>
+            </div> -->
 
             <!-- USERNAME -->
             <label for="username">Username</label>
@@ -300,17 +300,20 @@
 
             <!-- PASSWORD -->
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Please, enter a password" #inputPassword ngModel #passwordInput="ngModel" [appMinCount]="6">
+            <input type="password" name="password" placeholder="Please, enter a password" #inputPassword ngModel #passwordInput="ngModel" [appMinCount]="8" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,20})">
             <div class="input-required" *ngIf="passwordInput.touched">
-                <span *ngIf="passwordInput.errors?.['appMinCount']">Password must be at least {{passwordInput.errors?.['appMinCount']}} characters!</span>
+                <span *ngIf="passwordInput.errors?.['pattern']">Password should: <br>- be at between 8 and 20 characters <br>- include at least 1 small letter, <br>- one Capital letter, <br>- one number <br>- and 1 special symbol.</span>
             </div>
 
             <!-- REPEAT PASSWORD -->
             <label for="repeat-pass">Repeat Password</label>
-            <input type="password" name="repass" placeholder="Please, repeat your password">
+            <input  type="password" name="repass" placeholder="Please, repeat your password" ngModel required #rePasswordInput="ngModel" >
+            <div class="input-required" *ngIf="rePasswordInput.touched">
+            <span *ngIf="rePasswordInput.errors?.['required'] || passwordInput.value !== rePasswordInput.value">Passwords don't match!</span>
 
+            </div>
             <!-- SUBMIT -->
-            <button>Register</button>
+            <button [style]="{backgroundColor: registerForm.invalid ? 'grey' : 'tomato'}">Register</button>
         </form>
         <p>If you are a registered user, please go to our <a routerLink="/login">Login page</a>.</p>
     </div>

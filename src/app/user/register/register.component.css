@@ -60,12 +60,14 @@ label {
 }
 
 
-input.ng-valid {
+input.ng-valid,
+select.ng-valid {
     border-left: 8px solid rgb(0, 255, 0);
     width: 380px;
 }
 
-input.ng-invalid {
+input.ng-invalid,
+select.ng-invalid {
     border-left: 8px solid tomato;
     width: 380px;
 }
