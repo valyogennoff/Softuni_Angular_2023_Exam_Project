@@ -12,6 +12,11 @@ import { ProductPageComponent } from './product/product-page/product-page.compon
 import { UserModule } from './user/user.module';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { NewProductComponent } from './product/new-product/new-product.component';
+import { appInterceptorProvider } from './app.interceptor';
+import { FormsModule } from '@angular/forms';
+import { ProductModule } from './product/product.module';
+import { MinCountDirective } from './user/min-count.directive';
+import { MinDescrDirective } from './min-descr.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,8 @@ import { NewProductComponent } from './product/new-product/new-product.component
     ProductListComponent,
     ProductPageComponent,
     NewProductComponent,
+    MinDescrDirective,
+    // MinCountDirective
   ],
   imports: [
     BrowserModule,
@@ -29,8 +36,10 @@ import { NewProductComponent } from './product/new-product/new-product.component
     CoreModule,
     HttpClientModule,
     UserModule,
+    FormsModule,
+    // ProductModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

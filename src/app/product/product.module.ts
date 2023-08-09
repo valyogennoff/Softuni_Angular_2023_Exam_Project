@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductRoutingModule } from './product-routing.module';
+import { FormsModule } from '@angular/forms';
+import { NewProductComponent } from './new-product/new-product.component';
 
 
 
@@ -11,7 +13,8 @@ import { ProductRoutingModule } from './product-routing.module';
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    // FormsModule
   ],
   exports: [
     // ProductPageComponent,

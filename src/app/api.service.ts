@@ -11,19 +11,19 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   // getCategories(limit?: number) {
-  //   const { appUrl } = environment;
+  //   const { apiUrl } = environment;
   //   const limitFilter = limit ? `?limit=${limit}` : '';
-  //   return this.http.get<Category[]>(`${appUrl}/themes${limitFilter}`);
+  //   return this.http.get<Category[]>(`${apiUrl}/data/themes${limitFilter}`);
   // }
   getProduct(id: string) {
-    const { appUrl } = environment;
-    return this.http.get<Product>(`${appUrl}/catalog/${id}`);
+    const { apiUrl } = environment;
+    return this.http.get<Product>(`${apiUrl}/data/catalog/${id}`);
   }
 
   getProducts(limit?: number) {
-    const { appUrl } = environment;
+    const { apiUrl } = environment;
     const limitFilter = limit ? `?limit=${limit}` : '';
-    return this.http.get<Product[]>(`${appUrl}/catalog${limitFilter}`);
-    // console.log({appUrl});
+    return this.http.get<Product[]>(`${apiUrl}/data/catalog${limitFilter}`);
+    // console.log({apiUrl});
   }
 }

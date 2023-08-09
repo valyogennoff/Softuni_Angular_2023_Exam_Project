@@ -2,36 +2,71 @@
     <h1>Add New Product</h1>
     <h2>to your <i class="fa-brands fa-angular"></i>ngular Crafts store</h2>
     <div class="register">
-        <form class="regform" method="post">
+        <form class="regform" #newItemForm="ngForm" (ngSubmit)="newProduct(newItemForm)">
 
             <label class="form-control-label" for="new-make">Name</label>
-            <input class="form-control valid" id="new-make" type="text" name="make" placeholder="A Great New Product">
-            
+            <input 
+            class="form-control valid" 
+            id="new-make" 
+            type="text" 
+            name="make" 
+            placeholder="A Great New Product"
+            ngModel required
+            #inputName="ngModel">
+            <div class="input-required" *ngIf="inputName.touched">
+                <span *ngIf="inputName.errors?.['required']">Name is required!</span>
+            </div>
             
             <label class="form-control-label" for="new-description">Description<br>Paragraph 1</label>
-            <input class="form-control" id="new-description" type="text" name="description" placeholder="Provide a description of your product">
+            <input 
+            id="new-description" 
+            type="text" 
+            name="description" 
+            placeholder="Provide a description of your product"
+            ngModel required
+            [appMinDescr]="50" 
+            #inputDesc1="ngModel">
+            <div class="input-required" *ngIf="inputDesc1.touched">
+                <span *ngIf="inputDesc1.errors?.['appMinDescr']">Description is required and needs to be at least 50 characters!</span>
+            </div>
 
 
             <label class="form-control-label" for="new-model">Paragraph 2</label>
-            <input class="form-control" id="new-model" type="text" name="model" placeholder="Continue description of your product">
+            <input 
+            id="new-model" 
+            type="text" 
+            name="model" 
+            placeholder="Continue description of your product"
+            ngModel
+            #inputDesc2="ngModel">
 
             <label class="form-control-label" for="new-material">Paragraph 3</label>
-            <input class="form-control" id="new-material" type="text" name="material" placeholder="Some more description of your product">
+            <input 
+            id="new-material" 
+            type="text" 
+            name="material" 
+            placeholder="Some more description of your product"
+            ngModel
+            #inputDesc3="ngModel">
             
 
             <label class="form-control-label" for="new-year">Year</label>
-            <input class="form-control" id="new-year" type="text" name="year" placeholder="678.99">
+            <input id="new-year" type="text" name="year" placeholder="2019"
+            ngModel
+            #inputYear="ngModel">
 
 
             <label class="form-control-label" for="new-price">Price</label>
-            <input class="form-control" id="new-price" type="text" name="price" placeholder="678.99">
+            <input id="new-price" type="text" name="price" placeholder="678.99"
+            ngModel required
+            #inputPrice="ngModel">
 
             <label class="form-control-label" for="new-image">Image (link)</label>
-            <input class="form-control" id="new-image" type="text" name="img" placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
+            <input id="new-image" type="text" name="img" placeholder="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+            ngModel required
+            #inputImg="ngModel">
 
-
-            <input type="submit" class="btn btn-primary" value="Add Product" />
-
+            <button [style]="{backgroundColor: newItemForm.invalid ? 'grey' : 'tomato'}">Add Product</button>
 
         </form>
 

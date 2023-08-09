@@ -47,12 +47,22 @@ async function logout(token) {
 function createToken(user) {
     const payload = {
         _id: user._id,
-        email: user.email
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        img: user.img,
+        country: user.country,
+        items: user.items,
     };
 
     return {
         _id: user._id,
+        name: user.name,
+        username: user.username,
         email: user.email,
+        img: user.img,
+        country: user.country,
+        items: user.items,
         accessToken: jwt.sign(payload, secret)
     };
 }

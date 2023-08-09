@@ -8,7 +8,9 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+
+export class LoginComponent implements OnInit {
+
 
   constructor(private userService: UserService, private router: Router) { }
 
@@ -23,17 +25,21 @@ export class LoginComponent {
       return;
     }
     const { email, password } = form.value;
-    this.userService.login(email, password).subscribe(() => {
 
-      form.setValue({
-        email: '',
-        password: '',
-      });
+    this.userService.login(email, password).subscribe((res: any) => {
+      localStorage.setItem('token', res.accessToken);
+
+      // form.setValue({
+      //   email: '',
+      //   password: '',
+      // });
       this.router.navigate(['/']);
 
     });
+  }
 
-
+  ngOnInit(): void {
+    localStorage.getItem('token')
   }
 
 }

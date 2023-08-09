@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserRoutingModule } from './user-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MinCountDirective } from './min-count.directive';
 // import { PassDirective } from './pass.directive';
 
@@ -22,6 +22,7 @@ import { MinCountDirective } from './min-count.directive';
     CommonModule,
     UserRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }

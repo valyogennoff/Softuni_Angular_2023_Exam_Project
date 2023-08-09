@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
 const cors = require('./middlewares/cors');
 const authController = require('./controllers/authController');
 const dataController = require('./controllers/dataController');
 const trimBody = require('./middlewares/trimBody');
 const session = require('./middlewares/session');
+// const cors = require('cors');
 
 const PORT = 3030;
 

@@ -18,10 +18,22 @@ export class HeaderComponent {
 
   get loggedName(): string {
     return this.userService.user?.name || '';
+
+  }
+
+  get loggedImg(): string {
+    return this.userService.user?.img || '';
+
   }
 
   logout(): void {
-    this.userService.logout();
-    this.router.navigate(['/']);
+    this.userService.logout().subscribe({
+      next: () => {
+        this.router.navigate(['/']);
+      },
+      error: () => {
+        this.router.navigate(['/']);
+      },
+    });
   }
 }

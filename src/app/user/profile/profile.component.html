@@ -1,21 +1,69 @@
 <main>
     <h2>My Profile</h2>
 <section class="profile-info">
-<img src="https://randomuser.me/api/portraits/men/36.jpg" alt="" class="profile-img">
-    <div class="my-info">
-        <p>Name: <span>Simon</span></p>
-        <p>Surname: <span>Bonetti</span></p>
-        <p>Email: <span>simonbonetti@gmail.com</span></p>
-        <p>Phone: <span>+597 645 824</span></p>
-        <p>Country: <span>South Africa</span></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
-</section>
-<section class="admin">
+<img src="{{profileDetails.img}}" alt="" class="profile-img">
+<div class="my-info" *ngIf="!isEditMode">
+    <p>Name: <span>{{profileDetails.name}}</span></p>
+    <p>Username: <span>{{profileDetails.username}}</span></p>
+    <p>Email: <span>{{profileDetails.email}}</span></p>
+    <p>Country: <span>{{profileDetails.country}}</span></p>
+    <!-- <p>Phone: <span>+597 645 824</span></p> -->
+    <p></p>
+    <p></p>
+    <p></p>
+    <section class="admin">
+    
+        <button class="edit-btn-pro" (click)="toggleEditMode()">Edit Profile Info</button>
+    </section>
+</div>
+<div class="my-edit-info" *ngIf="isEditMode">
+    <form class="userEditForm" [formGroup]="form" (ngSubmit)="saveProfileHandler">
+    <label for="">Name: </label>
+    <input
+    type="text"
+    id="name"
+    formControlName="name">
 
-    <button>Edit Profile Info</button>
+    <label for="">Username: </label>
+    <input 
+    type="text"
+    id="username"
+    formControlName="username">
+
+    <div class="input-required" *ngIf="form.get('username')?.touched">
+        <span *ngIf="form.get('username')?.errors?.['required']">Username is required!</span>
+        <span *ngIf="form.get('username')?.errors?.['miLength']">Username should be at least 5 characters!</span>
+    </div>
+
+    <label for="">Email: </label>
+    <input
+    type="text"
+    id="email"
+    formControlName="email">
+    <div class="input-required" *ngIf="form.get('email')?.touched">
+        <span *ngIf="form.get('email')?.errors?.['required']">Email is required!</span>
+        <span *ngIf="form.get('email')?.errors?.['email']">Email is invalid!</span>
+    </div>
+
+    <label for="">Country</label>
+    <input
+    type="text"
+    id="Country"
+    formControlName="country">
+
+    <label for="">Image</label>
+    <input
+    type="text"
+    id="img"
+    value="https://randomuser.me/api/portraits/men/36.jpg"
+    formControlName="img">
+    </form>
+    <section class="admin">
+    
+        <button class="cancel-btn-pro" (click)="saveProfileHandler()">Cancel Editing</button>
+        <button class="edit-btn-pro" (click)="saveProfileHandler()">Save Profile Info</button>
+    </section>
+</div>
 </section>
 
 
@@ -25,6 +73,66 @@
     <h3>My products</h3>
     <section class="profile-container">
         <ul class="profile-container-ul" role='list'>
+            <li class="profile-product-card-li">
+                <a href="product.html" class="home-popular-card-a">
+                    <img src="https://i.etsystatic.com/31492007/c/2000/1589/0/341/il/7266aa/3441803117/il_340x270.3441803117_oand.jpg" alt="">
+                    <div class="product-description">
+                        <h3>Product Name</h3>
+                        <!-- <p class="catName">Category: {{Name}}</p> -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
+                    </div>
+                </a>
+            </li>
+            <li class="profile-product-card-li">
+                <a href="product.html" class="home-popular-card-a">
+                <img src="https://i.etsystatic.com/31492007/c/1739/1382/104/431/il/673975/3875688672/il_340x270.3875688672_g6jt.jpg" alt="">
+                <div class="product-description">
+                    <h3>Product Name</h3>
+                    <!-- <p class="catName">Category: {{Name}}</p> -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
+                </div>
+                </a>
+            </li>
+            <li class="profile-product-card-li">
+                <a href="product.html" class="home-popular-card-a">
+                <img src="https://i.etsystatic.com/32450482/c/2200/1748/0/338/il/a5dfef/3451458290/il_340x270.3451458290_awgk.jpg" alt="">
+                <div class="product-description">
+                    <h3>Product Name</h3>
+                    <!-- <p class="catName">Category: {{Name}}</p> -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
+                </div>
+            </a>
+            </li>
+            <li class="profile-product-card-li">
+                <a href="product.html" class="home-popular-card-a">
+                <img src="https://i.etsystatic.com/41629608/r/il/5af829/4828637132/il_340x270.4828637132_31nf.jpg" alt="">
+                <div class="product-description">
+                    <h3>Product Name</h3>
+                    <!-- <p class="catName">Category: {{Name}}</p> -->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
+                </div>
+            </a>
+            </li>
             <li class="profile-product-card-li">
                 <a href="product.html" class="home-popular-card-a">
                     <img src="https://i.etsystatic.com/31492007/c/2000/1589/0/341/il/7266aa/3441803117/il_340x270.3441803117_oand.jpg" alt="">
