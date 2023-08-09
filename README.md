@@ -21,3 +21,5 @@
 - Create comments;
 - Rating;
 - Add to favourites
+
+![Home Page Preview](https://drive.google.com/file/d/1Z-VfPTqemtYUKwsGC-TKwhgxNu7yxldn/view?usp=drive_link)
