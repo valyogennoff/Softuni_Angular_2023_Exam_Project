@@ -22,3 +22,7 @@
 - Rating;
 - Add to favourites
 
+<<<<<<< HEAD
+=======
+![Home Page Preview]([https://drive.google.com/file/d/1Z-VfPTqemtYUKwsGC-TKwhgxNu7yxldn/view?usp=drive_link](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project#readme)https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project#readme)
+>>>>>>> 6a16458638d5844d66b094fd7e7b922a37bd1457
