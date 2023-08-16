@@ -4,19 +4,20 @@ import { UserId } from "./user-id";
 export interface Product {
     _id: string;
     make: string;
-    _ownerId: {
-        "items": string[],
-        "_id": string,
-        "name": string,
-        "username": string,
-        "email": string,
-        "img": string,
-        "country": string,
-        "password": string,
-        "created_at": string,
-        "updatedAt": string,
-        "__v": number,
-    }
+    _ownerId: UserId;
+    // {
+    //     "items": string[],
+    //     "_id": string,
+    //     "name": string,
+    //     username: string,
+    //     "email": string,
+    //     "img": string,
+    //     "country": string,
+    //     "password": string,
+    //     "created_at": string,
+    //     "updatedAt": string,
+    //     "__v": number,
+    // };
     price: number;
     description: string;
     // tags?: string[];

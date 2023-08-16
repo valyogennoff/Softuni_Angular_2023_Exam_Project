@@ -1,6 +1,13 @@
 
-        <ul *ngFor="let product of productList" class="product-container-ul" role='list'>
-            <li class="category-product-card-li">
+<div class="loading"  *ngIf="isLoading" >
+    <app-loader></app-loader>
+</div>
+<div>
+    <ul *ngFor="let product of productList" class="product-container-ul" role='list'>
+        <li  *ngIf="isLoading" >
+            <app-loader></app-loader>
+        </li>
+        <li class="category-product-card-li">
                 <a routerLink="/products/{{product._id}}" class="home-product-card-a">
                     <img src="{{product.img}}" alt="">
                     <div class="product-description">
@@ -15,7 +22,7 @@
                         <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
                         <p class="product-description-seller">
                             <span class="product-description-seller-name">Added {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                            <span class="seller-items-quantity"> by {{product._ownerId}} </span>
+                            <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
                         </p>
                     </div>
                     <div class="favourite"><i class="fa-regular fa-heart"></i></div>
@@ -24,4 +31,4 @@
             </li>
 
         </ul>
-
+    </div>

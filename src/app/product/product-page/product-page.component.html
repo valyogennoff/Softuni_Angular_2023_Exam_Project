@@ -1,6 +1,9 @@
+<section class="loading"  *ngIf="isLoading" >
+    <app-loader></app-loader>
+</section>
 <main>
 
-    <section class="product-container">
+    <section  *ngIf="!isLoading" class="product-container">
         <ul class="product-display" role="list">
             <li class="product-photo"><img src="{{product?.img}}" alt=""></li>
         </ul>

@@ -20,6 +20,7 @@ import { MinDescrDirective } from './min-descr.directive';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { SharedModule } from './shared/shared.module';
 import { SlicePipe } from '@angular/common';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SlicePipe } from '@angular/common';
     NewProductComponent,
     MinDescrDirective,
     AuthenticateComponent,
+    NotFoundComponent,
     // MinCountDirective
   ],
   imports: [

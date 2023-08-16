@@ -11,12 +11,22 @@ import { UserId } from 'src/app/types/user-id';
 export class ProductListComponent implements OnInit {
   title = 'Smart Angular Crafts';
   productList: Product[] = [];
+  isLoading: boolean = true;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getProducts(8).subscribe((items) => {
-      console.log(items);
-      this.productList = items;
-    });
+    this.apiService.getProducts(8).subscribe(
+      {
+        next: (items) => {
+          console.log(items);
+          this.productList = items;
+          this.isLoading = false;
+        },
+        error: (err) => {
+          this.isLoading = false;
+          console.error(`Error: ${err}`)
+        }
+      }
+    );
   }
 }

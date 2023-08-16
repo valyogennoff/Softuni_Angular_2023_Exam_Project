@@ -7,6 +7,7 @@ import { ProductPageComponent } from './product/product-page/product-page.compon
 import { AuthActivate } from './core/guards/auth.activate';
 import { CartComponent } from './cart/cart/cart.component';
 import { ErrorComponent } from './core/error/error.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
