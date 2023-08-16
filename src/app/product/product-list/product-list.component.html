@@ -11,8 +11,11 @@
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star"></span>
                         <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                        
+                        <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
                         <p class="product-description-seller">
-                            <span class="product-description-seller-name">{{product.created_at}}</span> <span class="seller-items-quantity">(28 items)</span>
+                            <span class="product-description-seller-name">Added {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            <span class="seller-items-quantity"> by {{product._ownerId}} </span>
                         </p>
                     </div>
                     <div class="favourite"><i class="fa-regular fa-heart"></i></div>

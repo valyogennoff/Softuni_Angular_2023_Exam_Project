@@ -13,9 +13,9 @@
             <ul class="client-ul" role='list'>
                 <li class="client-li add-product" *ngIf="isLoggedIn"><a routerLink="/new-product"><i class="fa-regular fa-square-plus"></i><p>Add Product</p></a></li>
                 <!-- <li><img src="{{loggedImg}}" alt=""></li> -->
-                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></a></li>
-                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/register"><i class="fa-solid fa-user-plus"></i><p>Register</p></a></li>
-                <li class="client-li" *ngIf="isLoggedIn"><a routerLink="/profile"><i class="fa-regular fa-circle-user"></i><p>{{loggedName}}</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/auth/login"><i class="fa-solid fa-right-to-bracket"></i><p>Log In</p></a></li>
+                <li class="client-li" *ngIf="!isLoggedIn"><a routerLink="/auth/register"><i class="fa-solid fa-user-plus"></i><p>Register</p></a></li>
+                <li class="client-li" *ngIf="isLoggedIn"><a routerLink="/auth/profile"><i class="fa-regular fa-circle-user"></i><p>{{loggedName}}</p></a></li>
                 <!-- <li class="client-li" *ngIf="isLoggedIn"><a href=""><i class="fa-regular fa-heart"></i><p>Saved</p></a></li> -->
                 <li class="client-li"><a routerLink="/cart"><i class="fa-solid fa-cart-shopping"></i><p>Cart</p></a></li>
                 <li class="client-li logout" *ngIf="isLoggedIn" (click)="logout()"><a><i class="fa-solid fa-right-from-bracket"></i><p>Logout</p></a></li>

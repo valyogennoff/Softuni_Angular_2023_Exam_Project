@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { ProductModule } from './product/product.module';
 import { MinCountDirective } from './user/min-count.directive';
 import { MinDescrDirective } from './min-descr.directive';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { SharedModule } from './shared/shared.module';
+import { SlicePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { MinDescrDirective } from './min-descr.directive';
     ProductPageComponent,
     NewProductComponent,
     MinDescrDirective,
+    AuthenticateComponent,
     // MinCountDirective
   ],
   imports: [
@@ -37,6 +41,8 @@ import { MinDescrDirective } from './min-descr.directive';
     HttpClientModule,
     UserModule,
     FormsModule,
+    SharedModule,
+    // SlicePipe
     // ProductModule
   ],
   providers: [appInterceptorProvider],

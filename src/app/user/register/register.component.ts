@@ -24,10 +24,15 @@ export class RegisterComponent implements OnInit {
     }
     const { name, username, email, img, country, password, repass } = form.value;
 
-    this.userService.register(name, username, email, img, country, password, repass).subscribe((res: any) => {
-      localStorage.setItem('token', res.accessToken);
-      this.router.navigate(['/']);
-    })
+    try {
+      this.userService.register(name, username, email, img, country, password, repass).subscribe((res: any) => {
+        localStorage.setItem('token', res.accessToken);
+        this.router.navigate(['/']);
+      })
+
+    } catch (error) {
+      alert(error);
+    }
 
   }
 

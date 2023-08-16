@@ -17,7 +17,7 @@
         </div>
             <!-- PASS -->
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Password - zZaAqQ1!</label>
                 <input type="password" name="password" placeholder="Please, enter your password" #inputPassword ngModel #passwordInput="ngModel" [appMinCount]="8" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,20})">
             </div>
 
@@ -32,6 +32,6 @@
 
             <!-- <button (click)="login(inputEmail.value, inputPassword.value)">Test Login</button> -->
         </form>
-        <p>If you are not a registered user, please go to our <a routerLink="/register">Registration page</a>.</p>
+        <p>If you are not a registered user, please go to our <a routerLink="/auth/register">Registration page</a>.</p>
     </div>
 </main>

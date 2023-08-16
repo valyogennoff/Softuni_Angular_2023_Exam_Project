@@ -20,6 +20,7 @@ const routes: Routes = [
         component: ProfileComponent,
         // canActivate: [AuthActivate],
     },
+
 ];
 
 @NgModule({

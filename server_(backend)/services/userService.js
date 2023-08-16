@@ -75,9 +75,29 @@ function parseToken(token) {
     return jwt.verify(token, secret);
 }
 
+
+function getProfileInfo(req, res, next) {
+    const { _id: userId } = req.user;
+
+    User.findOne({ _id: userId }, { password: 0, __v: 0 }) //finding by Id and returning without password and __v
+        .then(user => { res.status(200).json(user) })
+        .catch(next);
+}
+
+function editProfileInfo(req, res, next) {
+    const { _id: userId } = req.user;
+    const { name, username, email, country, img } = req.body;
+
+    User.findOneAndUpdate({ _id: userId }, { name, username, email, country, img }, { runValidators: true, new: true })
+        .then(x => { res.status(200).json(x) })
+        .catch(next);
+}
+
 module.exports = {
     register,
     login,
     logout,
-    parseToken
+    parseToken,
+    getProfileInfo,
+    editProfileInfo
 };

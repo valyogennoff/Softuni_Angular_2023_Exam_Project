@@ -6,6 +6,7 @@ import { NewProductComponent } from './product/new-product/new-product.component
 import { ProductPageComponent } from './product/product-page/product-page.component';
 import { AuthActivate } from './core/guards/auth.activate';
 import { CartComponent } from './cart/cart/cart.component';
+import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,14 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
+  {
+    path: 'error',
+    component: ErrorComponent
   }
 ];
 

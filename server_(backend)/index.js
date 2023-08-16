@@ -1,4 +1,5 @@
 const express = require('express');
+// const router = express.Router();
 const mongoose = require('mongoose');
 const cors = require('./middlewares/cors');
 const authController = require('./controllers/authController');
@@ -33,6 +34,9 @@ async function start() {
 
     app.use('/users', authController);
     app.use('/data/catalog', dataController);
+
+    // router.get('/profile', auth(),authController.getProfileInfo);
+    // router.put('/profile', auth(),authController.editProfileInfo);
 
     app.listen(PORT, () => console.log('REST service started'));
 }
