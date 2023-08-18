@@ -9,8 +9,10 @@ import { ErrorService } from './error.service';
 export class ErrorComponent implements OnInit {
 
   apiError$ = this.errorService.apiError$$.asObservable();
+  apiSuccess$ = this.errorService.apiSuccess$$.asObservable();
 
   errorMsg = '';
+  successMsg = '';
 
 
   constructor(private errorService: ErrorService) { }
@@ -18,6 +20,9 @@ export class ErrorComponent implements OnInit {
   ngOnInit(): void {
     this.apiError$.subscribe((err: any) => {
       this.errorMsg = err.message;
-    })
+    });
+    this.apiSuccess$.subscribe((err: any) => {
+      this.successMsg = err.message;
+    });
   }
 }

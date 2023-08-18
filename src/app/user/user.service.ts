@@ -67,8 +67,9 @@ export class UserService implements OnDestroy {
   };
 
 
+
   logout() {
-    localStorage.removeItem(this.USER_KEY)
+    localStorage.clear();
     return this.http
       .get<User>('/api/users/logout', {})
       .pipe(tap(() => this.user$$.next(undefined)));

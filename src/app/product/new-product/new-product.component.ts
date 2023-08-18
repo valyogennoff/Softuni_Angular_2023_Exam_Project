@@ -1,5 +1,8 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-new-product',
@@ -7,11 +10,23 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./new-product.component.css']
 })
 export class NewProductComponent {
+  constructor(private apiService: ApiService, private router: Router) { }
+
+  getAuthToken(): string | null {
+    return localStorage.getItem('accessToken');
+  }
 
 
   newProduct(newItemForm: NgForm): void {
-    if (newItemForm.invalid) return;
-    console.log(newItemForm.value);
+    const authToken = this.getAuthToken();
+    if (newItemForm.invalid || !authToken) return;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${authToken}`
+    });
 
+    const { make, description, material, model, price, year, img, } = newItemForm.value;
+    this.apiService.addProduct(make, description, material, model, price, year, img,).subscribe(() => {
+      this.router.navigate(['/products'])
+    });
   }
 }

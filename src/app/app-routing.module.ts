@@ -43,10 +43,12 @@ const routes: Routes = [
     path: 'cart',
     component: CartComponent,
   },
+  // Lazy load User Module
   {
     path: 'auth',
     loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
   },
+
   {
     path: 'error',
     component: ErrorComponent

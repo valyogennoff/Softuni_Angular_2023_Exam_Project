@@ -32,7 +32,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProductPageComponent,
     NewProductComponent,
     MinDescrDirective,
-    AuthenticateComponent,
     NotFoundComponent,
     // MinCountDirective
   ],

@@ -16,26 +16,22 @@ export class AppInterceptor implements HttpInterceptor {
         private errorService: ErrorService
     ) { }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const accessToken = this.authService.getToken();
-        const userId = this.authService.getUserId();
 
-        if (accessToken) {
-            req = req.clone({
-                setHeaders: {
-                    Authorization: `Bearer ${accessToken}`,
-                    // UserId: userId,
-                },
-            });
-        }
+
+        console.log('Before If');
+
 
         if (req.url.startsWith('/api')) {
-            // if (accessToken) {
+            const accessToken = this.authService.getToken();
             req = req.clone({
                 url: req.url.replace('/api', apiUrl),
+                headers: req.headers.set('Authorization', 'Bearer ' + accessToken),
             });
-            // }
-        }
+            debugger
 
+            console.log(accessToken);
+
+        }
 
 
         return next.handle(req).pipe(

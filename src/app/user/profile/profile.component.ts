@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/api.service';
+
+import { Product } from 'src/app/types/product';
 
 interface Profile {
   name: string;
@@ -14,8 +17,10 @@ interface Profile {
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   isEditMode: boolean = false;
+  productList: Product[] = [];
+  isLoading: boolean = true;
 
   profileDetails: Profile = {
     name: 'Valyo Gennoff',
@@ -33,8 +38,9 @@ export class ProfileComponent {
     country: ['', Validators.required],
     img: ['', Validators.required],
   });
+  AuthService: any;
 
-  constructor(private fb: FormBuilder,) {
+  constructor(private fb: FormBuilder, private apiService: ApiService) {
 
   }
 
@@ -52,6 +58,24 @@ export class ProfileComponent {
     console.log(this.form.value);
 
     this.toggleEditMode();
+  }
+
+  ngOnInit(): void {
+    // const userId = this.AuthService.getUserId
+    // console.log(userId);
+
+    // this.apiService.getMyProducts().subscribe(
+    //   {
+    //     next: (items) => {
+    //       console.log(items);
+    //       this.productList = items;
+    //       this.isLoading = false;
+    //     },
+    //     error: (err) => {
+    //       this.isLoading = false;
+    //       console.error(`Error: ${err}`)
+    //     }
+    //   });
   }
 
 

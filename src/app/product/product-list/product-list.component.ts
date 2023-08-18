@@ -26,7 +26,6 @@ export class ProductListComponent implements OnInit {
           this.isLoading = false;
           console.error(`Error: ${err}`)
         }
-      }
-    );
+      });
   }
 }

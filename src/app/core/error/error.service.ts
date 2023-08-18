@@ -5,7 +5,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ErrorService {
-  apiError$$ = new BehaviorSubject(null)
+  apiError$$ = new BehaviorSubject(null);
+  apiSuccess$$ = new BehaviorSubject(null);
 
   constructor() { }
 
