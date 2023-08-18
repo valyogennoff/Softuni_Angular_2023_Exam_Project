@@ -27,7 +27,7 @@ export class AppInterceptor implements HttpInterceptor {
                 url: req.url.replace('/api', apiUrl),
                 headers: req.headers.set('Authorization', 'Bearer ' + accessToken),
             });
-            debugger
+
 
             console.log(accessToken);
 
