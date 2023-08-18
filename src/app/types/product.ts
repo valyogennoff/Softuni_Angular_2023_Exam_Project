@@ -4,6 +4,7 @@ import { UserId } from "./user-id";
 export interface Product {
     _id: string;
     make: string;
+    category: string;
     _ownerId: UserId;
     // {
     //     "items": string[],

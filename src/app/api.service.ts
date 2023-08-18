@@ -32,15 +32,15 @@ export class ApiService {
     description: string,
     material: string,
     model: string,
-    price: string,
-    year: string,
+    price: number,
+    category: string,
     img: string,
   ) {
     // const token = localStorage.getItem('accessToken');
     // const headers = new HttpHeaders({
     //   Authorization: `Bearer ${token}`,
     // });
-    return this.http.post<Product>('/api/data/catalog', { make, description, material, model, price, year, img });
+    return this.http.post<Product>('/api/data/catalog', { make, description, material, model, price, category, img });
   }
 
   getMyProducts() {

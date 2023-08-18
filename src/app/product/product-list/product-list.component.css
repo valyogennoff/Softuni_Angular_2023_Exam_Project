@@ -70,11 +70,16 @@
 .fa-star,
 .price-tag {
     transform: translate(0px, -28px);
+    color: rgb(255, 145, 71);
 }
 
 .stars {
     margin-bottom: 0.2rem;
     transform: translate(0px, -24px);
+}
+
+.pr-cat {
+    font-weight: 800;
 }
 
 .satoshi {

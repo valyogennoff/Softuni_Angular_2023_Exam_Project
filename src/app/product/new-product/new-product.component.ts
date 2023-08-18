@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./new-product.component.css']
 })
 export class NewProductComponent {
+  title = 'Create New Product';
   constructor(private apiService: ApiService, private router: Router) { }
 
   getAuthToken(): string | null {
@@ -24,8 +25,8 @@ export class NewProductComponent {
       'Authorization': `Bearer ${authToken}`
     });
 
-    const { make, description, material, model, price, year, img, } = newItemForm.value;
-    this.apiService.addProduct(make, description, material, model, price, year, img,).subscribe(() => {
+    const { make, description, material, model, price, category, img, } = newItemForm.value;
+    this.apiService.addProduct(make, description, material, model, price, category, img,).subscribe(() => {
       this.router.navigate(['/products'])
     });
   }

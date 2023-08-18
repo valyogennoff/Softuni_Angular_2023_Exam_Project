@@ -3,7 +3,7 @@
     <app-loader></app-loader>
 </div>
 <div>
-    <ul *ngFor="let product of productList" class="product-container-ul" role='list'>
+    <!-- <ul *ngFor="let product of productList" class="product-container-ul" role='list'>
         <li  *ngIf="isLoading" >
             <app-loader></app-loader>
         </li>
@@ -12,16 +12,11 @@
                     <img src="{{product.img}}" alt="">
                     <div class="product-description">
                         <h3>{{product.make}}</h3>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
+
                         <p class="price-tag">${{(product.price).toFixed(2)}}</p>
                         
-                        <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
                         <p class="product-description-seller">
-                            <span class="product-description-seller-name">Added {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
                             <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
                         </p>
                     </div>
@@ -30,5 +25,247 @@
                 </a>
             </li>
 
-        </ul>
+    </ul> -->
+<h2 *ngIf="giftProductList.length > 0"> Gifts Category</h2>
+        <ul *ngFor="let product of giftProductList" class="product-container-ul" role="list">
+            <li  *ngIf="isLoading" >
+                <app-loader></app-loader>
+            </li>
+            <li class="category-product-card-li">
+                    <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                        <img src="{{product.img}}" alt="">
+                        <div class="product-description">
+                            <h3>{{product.make}}</h3>
+    <!-- 
+                            <span class="product-description-seller-name" >{{product.category}}</span> -->
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                            </p>
+                        </div>
+                        <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                    </a>
+                </li>
+          </ul>
+<h2 *ngIf="homeProductList.length > 0"> Home Category</h2>
+          <ul *ngFor="let product of homeProductList" class="product-container-ul" role="list">
+              <li  *ngIf="isLoading" >
+                  <app-loader></app-loader>
+              </li>
+              <li class="category-product-card-li">
+                      <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                          <img src="{{product.img}}" alt="">
+                          <div class="product-description">
+                              <h3>{{product.make}}</h3>
+      <!-- 
+                              <span class="product-description-seller-name" >{{product.category}}</span> -->
+                              <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                              
+                              <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                              <p class="product-description-seller">
+                                  <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                  <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                              </p>
+                          </div>
+                          <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                          <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                      </a>
+                  </li>
+            </ul>
+<h2 *ngIf="jewelryProductList.length > 0"> Jewellery Category</h2>
+            <ul *ngFor="let product of jewelryProductList" class="product-container-ul" role="list">
+                <li  *ngIf="isLoading" >
+                    <app-loader></app-loader>
+                </li>
+                <li class="category-product-card-li">
+                        <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                            <img src="{{product.img}}" alt="">
+                            <div class="product-description">
+                                <h3>{{product.make}}</h3>
+        <!-- 
+                                <span class="product-description-seller-name" >{{product.category}}</span> -->
+                                <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                
+                                <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                                <p class="product-description-seller">
+                                    <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                    <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                </p>
+                            </div>
+                            <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                            <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                        </a>
+                    </li>
+              </ul>
+              <h2> Fashion Category</h2>
+              <ul *ngFor="let product of fashionProductList" class="product-container-ul" role="list">
+                  <li  *ngIf="isLoading" >
+                      <app-loader></app-loader>
+                  </li>
+                  <li class="category-product-card-li">
+                          <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                              <img src="{{product.img}}" alt="">
+                              <div class="product-description">
+                                  <h3>{{product.make}}</h3>
+          <!-- 
+                                  <span class="product-description-seller-name" >{{product.category}}</span> -->
+                                  <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                  
+                                  <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                                  <p class="product-description-seller">
+                                      <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                      <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                  </p>
+                              </div>
+                              <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                              <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                          </a>
+                      </li>
+                </ul>   
+                <h2 *ngIf="elProductList.length > 0"> Electronics Category</h2>
+            <ul *ngFor="let product of elProductList" class="product-container-ul" role="list">
+                <li  *ngIf="isLoading" >
+                    <app-loader></app-loader>
+                </li>
+                <li class="category-product-card-li">
+                        <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                            <img src="{{product.img}}" alt="">
+                            <div class="product-description">
+                                <h3>{{product.make}}</h3>
+                                <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                                                <p class="product-description-seller">
+                                    <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                    <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                </p>
+                            </div>
+                            <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                            <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                        </a>
+                    </li>
+              </ul>   
+              <h2 *ngIf="eventsProductList.length > 0"> Events Category</h2>
+              <ul *ngFor="let product of eventsProductList" class="product-container-ul" role="list">
+                  <li  *ngIf="isLoading" >
+                      <app-loader></app-loader>
+                  </li>
+                  <li class="category-product-card-li">
+                          <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                              <img src="{{product.img}}" alt="">
+                              <div class="product-description">
+                                  <h3>{{product.make}}</h3>
+        
+                                  <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                  
+                                  <p class="product-description-seller">
+                                      <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                      <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                  </p>
+                              </div>
+                              <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                              <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                          </a>
+                      </li>
+                </ul>   
+                <h2 *ngIf="travelProductList.length > 0"> Travel Category</h2>
+                <ul *ngFor="let product of travelProductList" class="product-container-ul" role="list">
+                    <li  *ngIf="isLoading" >
+                        <app-loader></app-loader>
+                    </li>
+                    <li class="category-product-card-li">
+                            <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                                <img src="{{product.img}}" alt="">
+                                <div class="product-description">
+                                    <h3>{{product.make}}</h3>
+            
+                                    <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                    
+                                    <p class="product-description-seller">
+                                        <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                        <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                    </p>
+                                </div>
+                                <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                                <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                            </a>
+                        </li>
+                  </ul>  
+                  <h2 *ngIf="gardeningProductList.length > 0"> Gardening Category</h2>
+                  <ul *ngFor="let product of gardeningProductList" class="product-container-ul" role="list">
+                      <li  *ngIf="isLoading" >
+                          <app-loader></app-loader>
+                      </li>
+                      <li class="category-product-card-li">
+                              <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                                  <img src="{{product.img}}" alt="">
+                                  <div class="product-description">
+                                      <h3>{{product.make}}</h3>
+              <!-- 
+                                      <span class="product-description-seller-name" >{{product.category}}</span> -->
+                                      <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                      
+                                      <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                                      <p class="product-description-seller">
+                                          <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                          <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                      </p>
+                                  </div>
+                                  <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                                  <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                              </a>
+                          </li>
+                    </ul>  
+                    <h2 *ngIf="handProductList.length > 0"> Handmade Category</h2>
+                    <ul *ngFor="let product of handProductList" class="product-container-ul" role="list">
+                        <li  *ngIf="isLoading" >
+                            <app-loader></app-loader>
+                        </li>
+                        <li class="category-product-card-li">
+                                <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                                    <img src="{{product.img}}" alt="">
+                                    <div class="product-description">
+                                        <h3>{{product.make}}</h3>
+                <!-- 
+                                        <span class="product-description-seller-name" >{{product.category}}</span> -->
+                                        <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                        
+                                        <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                                        <p class="product-description-seller">
+                                            <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                            <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                        </p>
+                                    </div>
+                                    <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                                </a>
+                            </li>
+                      </ul>  
+                      <h2 *ngIf="outProductList.length > 0"> OutDoors Category</h2>
+                      <ul *ngFor="let product of outProductList" class="product-container-ul" role="list">
+                          <li  *ngIf="isLoading" >
+                              <app-loader></app-loader>
+                          </li>
+                          <li class="category-product-card-li">
+                                  <a routerLink="/products/{{product._id}}" class="home-product-card-a">
+                                      <img src="{{product.img}}" alt="">
+                                      <div class="product-description">
+                                          <h3>{{product.make}}</h3>
+                  <!-- 
+                                          <span class="product-description-seller-name" >{{product.category}}</span> -->
+                                          <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                                          
+                                          <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                                          <p class="product-description-seller">
+                                              <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                                              <span class="seller-items-quantity"> by {{product._ownerId.username}} </span>
+                                          </p>
+                                      </div>
+                                      <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                                      <div class="seller-image"><img src="{{product._ownerId.img}}" alt="Merchant's photo"></div>
+                                  </a>
+                              </li>
+                        </ul>  
     </div>

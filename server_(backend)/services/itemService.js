@@ -22,7 +22,7 @@ async function update(id, item) {
 
     existing.make = item.make;
     existing.model = item.model;
-    existing.year = item.year;
+    existing.category = item.category;
     existing.description = item.description;
     existing.price = item.price;
     existing.img = item.img;

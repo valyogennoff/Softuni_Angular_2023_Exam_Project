@@ -12,9 +12,9 @@
             <!-- <div class="stars">
                 <star-rating [stars]="product.stars"/>
             </div> -->
-            <span> (12 reviews)</span>
+            <span> {{product?.category}}</span>
             <p class="product-page-price-tag">${{product?.price}}</p>
-
+            
             <li class="product-description-li description">{{product?.model}}</li>
             <li class="product-description-li description">{{product?.description}}</li>
             <li class="product-description-li description">{{product?.material}}</li>

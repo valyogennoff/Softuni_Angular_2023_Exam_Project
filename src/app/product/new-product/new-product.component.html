@@ -4,6 +4,7 @@
     <div class="register">
         <form class="regform" #newItemForm="ngForm" (ngSubmit)="newProduct(newItemForm)">
 
+            <!-- NAME -->
             <label class="form-control-label" for="new-make">Name</label>
             <input 
             class="form-control valid" 
@@ -17,6 +18,7 @@
                 <span *ngIf="inputName.errors?.['required']">Name is required!</span>
             </div>
             
+            <!-- PAR 1 -->
             <label class="form-control-label" for="new-description">Description<br>Paragraph 1</label>
             <input 
             id="new-description" 
@@ -30,7 +32,7 @@
                 <span *ngIf="inputDesc1.errors?.['appMinDescr']">Description is required and needs to be at least 50 characters!</span>
             </div>
 
-
+            <!-- PAR 2 -->
             <label class="form-control-label" for="new-model">Paragraph 2</label>
             <input 
             id="new-model" 
@@ -40,6 +42,7 @@
             ngModel
             #inputDesc2="ngModel">
 
+            <!-- PAR 3 -->
             <label class="form-control-label" for="new-material">Paragraph 3</label>
             <input 
             id="new-material" 
@@ -48,17 +51,30 @@
             placeholder="Some more description of your product"
             ngModel
             #inputDesc3="ngModel">
-            
 
-            <label class="form-control-label" for="new-year">Year (Category)</label>
-            <input id="new-year" type="text" name="year" placeholder="2019"
-            ngModel
-            #inputYear="ngModel">
+            <!-- CATEGORY -->
+            <label class="form-control-label" for="new-category">Category</label>
+            <select class="form-select" id="new-category" name="category" placeholder="Select category" ngModel required #inputCategory="ngModel">
+                <option></option>
+                <option value="Fashion">Fashion</option>
+                <option value="Gifts">Gifts</option>
+                <option value="Jewellery">Jewellery</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Home">Home</option>
+                <option value="Events">Events</option>
+                <option value="Travel">Travel</option>
+                <option value="Gardening">Gardening</option>
+                <option value="Handmade">Handmade</option>
+                <option value="Outdoors">Outdoors</option>
+            </select>
+            <div class="input-required" *ngIf="inputCategory.touched">
+                <span *ngIf="inputCategory.errors?.['required']">Please, select a category!</span>
+            </div>
 
 
             <label class="form-control-label" for="new-price">Price</label>
             <input id="new-price" type="text" name="price" placeholder="Ex. 678.99"
-            ngModel required
+            ngModel required number
             #inputPrice="ngModel">
 
             <label class="form-control-label" for="new-image">Image (link)</label>
