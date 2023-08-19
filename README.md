@@ -10,6 +10,8 @@
     * Authentication and authorization
     * Guards
     * Directives
+    * Interceptors
+    * Angular Material
     * Reactive and template-driven forms
     * Storing data in a database (Mongo DB)
 
@@ -20,9 +22,12 @@
 - Create categories;
 - Create comments;
 - Rating;
-- Add to favourites
+- Add to favourites;
+- Edit Profile
 
-<<<<<<< HEAD
-=======
-![Home Page Preview]([https://drive.google.com/file/d/1Z-VfPTqemtYUKwsGC-TKwhgxNu7yxldn/view?usp=drive_link](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project#readme)https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project#readme)
->>>>>>> 6a16458638d5844d66b094fd7e7b922a37bd1457
+## App Images
+
+![home-page](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/d0dcf79d-10fe-44b8-a6b7-61db4855a072)
+
+![product-page](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/7ecd953e-8a24-442a-a3a2-94f6eff92e6b)
+
