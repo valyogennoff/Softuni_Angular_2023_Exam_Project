@@ -1,5 +1,10 @@
 main {
     text-align: center;
+
+}
+
+h3 {
+    margin-top: 40px;
 }
 
 .profile-info {
@@ -82,19 +87,25 @@ input {
 .profile-container {
     margin: auto;
     max-width: 800px;
-    padding: 8px 50px;
+    padding: 8px 40px;
     margin-bottom: 40px;
 }
 
 .profile-container-ul {
+
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
+
 .profile-product-card-li {
-    position: relative;
+
+    margin: 12px;
     height: 210px;
     width: 150px;
     border: 1px solid #ccc;
@@ -118,41 +129,18 @@ input {
 }
 
 .product-description {
+    transform: translate(0px, -32px);
     text-align: left;
+    line-height: 1.2;
+    font-size: 14px;
     padding: 0 8px;
 }
 
-.product-description .fa-star {
-    font-size: 12px;
-}
 
 .product-description .price-tag {
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.satoshi {
-    margin-top: -8px;
-    font-size: 14px;
-}
-
-.favourite {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-}
-
-.favourite:hover {
-    background-color: rgb(255, 215, 215);
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .category-product-card-li:hover>.favourite {
     display: flex;
@@ -165,13 +153,13 @@ input {
     font-size: 12px;
 }
 
-.seller-image {
-    position: absolute;
-    overflow: hidden;
-    bottom: 12px;
-    right: 12px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid #ff9900;
-    border-radius: 50%;
+.product-delete {
+    transform: translate(0px, -38px);
+    margin-left: 70px;
+    height: 26px;
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    cursor: not-allowed;
 }

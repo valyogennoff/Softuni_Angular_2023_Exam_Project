@@ -6,7 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserRoutingModule } from './user-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MinCountDirective } from './min-count.directive';
-// import { PassDirective } from './pass.directive';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -16,13 +16,13 @@ import { MinCountDirective } from './min-count.directive';
     RegisterComponent,
     ProfileComponent,
     MinCountDirective,
-    // PassDirective
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ]
 })
 export class UserModule { }

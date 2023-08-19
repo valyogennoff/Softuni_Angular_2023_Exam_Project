@@ -14,14 +14,14 @@
                         <h3>{{product.make}}</h3>
 
                         <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                        
+                            
                         <p class="product-description-seller">
                             <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                            <span class="seller-items-quantity">   </span>
                         </p>
                     </div>
-                    <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                    <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+                    <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                    <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                    <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                 </a>
             </li>
 
@@ -37,18 +37,17 @@
                                 <img src="{{product.img}}" alt="">
                                 <div class="product-description">
                                     <h3>{{product.make}}</h3>
-            <!-- 
-                                    <span class="product-description-seller-name" >{{product.category}}</span> -->
-                                    <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                    
-                                    <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
-                                    <p class="product-description-seller">
-                                        <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                        <span class="seller-items-quantity">   </span>
-                                    </p>
-                                </div>
-                                <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                                <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                             </a>
                         </li>
                   </ul>
@@ -62,18 +61,16 @@
                         <img src="{{product.img}}" alt="">
                         <div class="product-description">
                             <h3>{{product.make}}</h3>
-    <!-- 
-                            <span class="product-description-seller-name" >{{product.category}}</span> -->
+
                             <p class="price-tag">${{(product.price).toFixed(2)}}</p>
                             
-                            <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
                             <p class="product-description-seller">
                                 <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                <span class="seller-items-quantity">   </span>
                             </p>
                         </div>
-                        <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                     </a>
                 </li>
           </ul>
@@ -88,18 +85,16 @@
                               <img src="{{product.img}}" alt="">
                               <div class="product-description">
                                   <h3>{{product.make}}</h3>
-          <!-- 
-                                  <span class="product-description-seller-name" >{{product.category}}</span> -->
+
                                   <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                  
-                                  <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
+                            
                                   <p class="product-description-seller">
                                       <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                      <span class="seller-items-quantity">   </span>
                                   </p>
                               </div>
-                              <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                              <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+                              <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                              <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                              <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                           </a>
                       </li>
                 </ul>   
@@ -113,18 +108,17 @@
                           <img src="{{product.img}}" alt="">
                           <div class="product-description">
                               <h3>{{product.make}}</h3>
-      <!-- 
-                              <span class="product-description-seller-name" >{{product.category}}</span> -->
-                              <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                              
-                              <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
-                              <p class="product-description-seller">
-                                  <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                  <span class="seller-items-quantity">   </span>
-                              </p>
-                          </div>
-                          <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                          <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                       </a>
                   </li>
             </ul>
@@ -138,14 +132,17 @@
                             <img src="{{product.img}}" alt="">
                             <div class="product-description">
                                 <h3>{{product.make}}</h3>
-                                <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                                                <p class="product-description-seller">
-                                    <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                    <span class="seller-items-quantity">   </span>
-                                </p>
-                            </div>
-                            <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                            <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                         </a>
                     </li>
               </ul>   
@@ -161,14 +158,14 @@
                                   <h3>{{product.make}}</h3>
         
                                   <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                  
+                            
                                   <p class="product-description-seller">
                                       <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                      <span class="seller-items-quantity">   </span>
                                   </p>
                               </div>
-                              <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                              <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+                              <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                              <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                              <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                           </a>
                       </li>
                 </ul>   
@@ -184,14 +181,14 @@
                                     <h3>{{product.make}}</h3>
             
                                     <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                    
+                            
                                     <p class="product-description-seller">
                                         <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                        <span class="seller-items-quantity">   </span>
                                     </p>
                                 </div>
-                                <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                                <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+                                <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                                <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                                <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                             </a>
                         </li>
                   </ul>  
@@ -205,18 +202,17 @@
                                   <img src="{{product.img}}" alt="">
                                   <div class="product-description">
                                       <h3>{{product.make}}</h3>
-              <!-- 
-                                      <span class="product-description-seller-name" >{{product.category}}</span> -->
-                                      <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                      
-                                      <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
-                                      <p class="product-description-seller">
-                                          <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                          <span class="seller-items-quantity">   </span>
-                                      </p>
-                                  </div>
-                                  <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                                  <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                               </a>
                           </li>
                     </ul>  
@@ -230,18 +226,17 @@
                                     <img src="{{product.img}}" alt="">
                                     <div class="product-description">
                                         <h3>{{product.make}}</h3>
-                <!-- 
-                                        <span class="product-description-seller-name" >{{product.category}}</span> -->
-                                        <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                        
-                                        <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
-                                        <p class="product-description-seller">
-                                            <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                            <span class="seller-items-quantity">   </span>
-                                        </p>
-                                    </div>
-                                    <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                                    <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:160 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                                 </a>
                             </li>
                       </ul>  
@@ -255,18 +250,17 @@
                                       <img src="{{product.img}}" alt="">
                                       <div class="product-description">
                                           <h3>{{product.make}}</h3>
-                  <!-- 
-                                          <span class="product-description-seller-name" >{{product.category}}</span> -->
-                                          <p class="price-tag">${{(product.price).toFixed(2)}}</p>
-                                          
-                                          <!-- <p class="product-description-slice">{{product.model | slice:80 }}</p>  -->
-                                          <p class="product-description-seller">
-                                              <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
-                                              <span class="seller-items-quantity">   </span>
-                                          </p>
-                                      </div>
-                                      <div class="favourite"><i class="fa-regular fa-heart"></i></div>
-                                      <div class="seller-image"><img src="  " alt="Merchant's photo"></div>
+
+
+                            <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                            
+                            <p class="product-description-seller">
+                                <span class="product-description-seller-name">Added in <span class="pr-cat">{{product.category}}</span>  {{product.created_at | timeAgo}}</span> <span class="seller-items-quantity"></span>
+                            </p>
+                        </div>
+                        <p class="product-description-slice">{{product.model | slice:150 }}</p> 
+                        <!-- <div class="favourite"><i class="fa-regular fa-heart"></i></div>
+                        <div class="seller-image"><img src="  " alt="Merchant's photo"></div> -->
                                   </a>
                               </li>
                         </ul>  

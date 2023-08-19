@@ -50,4 +50,15 @@ export class ApiService {
     return this.http.get<Product[]>(`/api/data/catalog`);
   }
 
+  deleteProduct(id: string) {
+
+    const { apiUrl } = environment;
+
+
+    return this.http.delete<Product>(`${apiUrl}/data/catalog/${id}`);
+  }
+
+
+
+
 }

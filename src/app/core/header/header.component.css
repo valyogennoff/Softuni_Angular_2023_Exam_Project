@@ -166,3 +166,15 @@ form {
         transition: 0.4s;
     }
 }
+
+@media screen and (max-width: 770px) {
+    .search {
+        width: 70px;
+        transition: 0.4s;
+    }
+
+    #search {
+        width: 50px;
+        transition: 0.4s;
+    }
+}

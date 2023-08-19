@@ -1,9 +1,8 @@
 <main>
     <h2>My Profile</h2>
-    <!-- <div class="loading"  *ngIf="isLoading" >
-        <app-loader></app-loader>
-    </div> -->
+
 <section class="profile-info">
+
 <img src="{{myImage}}" alt="" class="profile-img">
 <div class="my-info" *ngIf="!isEditMode">
     <p>Name: <span>{{myName}}</span></p>
@@ -74,6 +73,9 @@
 
 
     <h3>My products</h3>
+    <div class="loading"  *ngIf="isLoading" >
+        <app-loader></app-loader>
+    </div>
     <section class="profile-container">
         <ul *ngFor="let product of filteredProductList" class="profile-container-ul" role='list'>
             <li class="profile-product-card-li">
@@ -82,15 +84,11 @@
                     <div class="product-description">
                         <h3>{{product.make}}</h3>
                         <p class="catName">Category: {{product.category}}</p>
-                        <!-- <p class="catName">_ownerId: {{product._ownerId._id}}</p> -->
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
+
                         <p class="price-tag">${{(product.price).toFixed(2)}}</p>
                     </div>
                 </a>
+                <button class="product-delete" (click)="deleteProduct(product._id)">Delete</button>
             </li>
 
             <!-- <li class="profile-product-card-li">
