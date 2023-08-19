@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +25,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { SharedModule } from './shared/shared.module';
 import { SlicePipe } from '@angular/common';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DeleteConfirmationModalComponent } from './delete-confirmation-modal/delete-confirmation-modal.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +38,21 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NewProductComponent,
     MinDescrDirective,
     NotFoundComponent,
+    DeleteConfirmationModalComponent,
     // MinCountDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
     UserModule,
     FormsModule,
     SharedModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
     // SlicePipe
     // ProductModule
   ],

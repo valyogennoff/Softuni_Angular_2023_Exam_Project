@@ -37,10 +37,7 @@ export class ApiService {
     category: string,
     img: string,
   ) {
-    // const token = localStorage.getItem('accessToken');
-    // const headers = new HttpHeaders({
-    //   Authorization: `Bearer ${token}`,
-    // });
+
     return this.http.post<Product>('/api/data/catalog', { make, description, material, model, price, category, img });
   }
 
@@ -50,15 +47,11 @@ export class ApiService {
     return this.http.get<Product[]>(`/api/data/catalog`);
   }
 
-  deleteProduct(id: string) {
-
+  deleteProduct(id: string, headers: HttpHeaders) {
     const { apiUrl } = environment;
+    const options = { headers };
 
-
-    return this.http.delete<Product>(`${apiUrl}/data/catalog/${id}`);
+    return this.http.delete<Product>(`${apiUrl}/data/catalog/${id}`, options);
   }
-
-
-
 
 }

@@ -78,6 +78,7 @@
     </div>
     <section class="profile-container">
         <ul *ngFor="let product of filteredProductList" class="profile-container-ul" role='list'>
+            
             <li class="profile-product-card-li">
                 <a routerLink="/products/{{product._id}}" class="home-popular-card-a">
                     <img src="{{product.img}}" alt="">
@@ -90,22 +91,6 @@
                 </a>
                 <button class="product-delete" (click)="deleteProduct(product._id)">Delete</button>
             </li>
-
-            <!-- <li class="profile-product-card-li">
-                <a href="product.html" class="home-popular-card-a">
-                    <img src="https://i.etsystatic.com/31492007/c/2000/1589/0/341/il/7266aa/3441803117/il_340x270.3441803117_oand.jpg" alt="">
-                    <div class="product-description">
-                        <h3>Product Name</h3>
-                        <p class="catName">Category: {{Name}}</p>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
-                    </div>
-                </a>
-            </li> -->
 
         </ul>
     </section>
