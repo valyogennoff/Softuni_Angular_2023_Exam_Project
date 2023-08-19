@@ -1,12 +1,15 @@
 <main>
     <h2>My Profile</h2>
+    <!-- <div class="loading"  *ngIf="isLoading" >
+        <app-loader></app-loader>
+    </div> -->
 <section class="profile-info">
-<img src="{{profileDetails.img}}" alt="" class="profile-img">
+<img src="{{myImage}}" alt="" class="profile-img">
 <div class="my-info" *ngIf="!isEditMode">
-    <p>Name: <span>{{profileDetails.name}}</span></p>
-    <p>Username: <span>{{profileDetails.username}}</span></p>
-    <p>Email: <span>{{profileDetails.email}}</span></p>
-    <p>Country: <span>{{profileDetails.country}}</span></p>
+    <p>Name: <span>{{myName}}</span></p>
+    <p>Username: <span>{{myUsername}}</span></p>
+    <p>Email: <span>{{myEmail}}</span></p>
+    <p>Country: <span>{{myCountry}}</span></p>
     <!-- <p>Phone: <span>+597 645 824</span></p> -->
     <p></p>
     <p></p>
@@ -72,8 +75,25 @@
 
     <h3>My products</h3>
     <section class="profile-container">
-        <!-- <ul *ngFor="let product of productList" class="profile-container-ul" role='list'>
+        <ul *ngFor="let product of filteredProductList" class="profile-container-ul" role='list'>
             <li class="profile-product-card-li">
+                <a routerLink="/products/{{product._id}}" class="home-popular-card-a">
+                    <img src="{{product.img}}" alt="">
+                    <div class="product-description">
+                        <h3>{{product.make}}</h3>
+                        <p class="catName">Category: {{product.category}}</p>
+                        <!-- <p class="catName">_ownerId: {{product._ownerId._id}}</p> -->
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p class="price-tag">${{(product.price).toFixed(2)}}</p>
+                    </div>
+                </a>
+            </li>
+
+            <!-- <li class="profile-product-card-li">
                 <a href="product.html" class="home-popular-card-a">
                     <img src="https://i.etsystatic.com/31492007/c/2000/1589/0/341/il/7266aa/3441803117/il_340x270.3441803117_oand.jpg" alt="">
                     <div class="product-description">
@@ -87,23 +107,7 @@
                         <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
                     </div>
                 </a>
-            </li>
+            </li> -->
 
-            <li class="profile-product-card-li">
-                <a href="product.html" class="home-popular-card-a">
-                    <img src="https://i.etsystatic.com/31492007/c/2000/1589/0/341/il/7266aa/3441803117/il_340x270.3441803117_oand.jpg" alt="">
-                    <div class="product-description">
-                        <h3>Product Name</h3>
-                        <p class="catName">Category: {{Name}}</p>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <p class="price-tag">$ 124,<span class="satoshi"><sup>95</sup></span></p>
-                    </div>
-                </a>
-            </li>
-
-        </ul> -->
+        </ul>
     </section>

@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
 import { Product } from './types/product';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authService: AuthService,) { }
 
   // getCategories(limit?: number) {
   //   const { apiUrl } = environment;
@@ -44,10 +45,9 @@ export class ApiService {
   }
 
   getMyProducts() {
-    const userId = sessionStorage.getItem('token');
+    const userId = this.authService.getToken();
     const { apiUrl } = environment;
-    return this.http.get<Product[]>(`/api/data/catalog?where=_ownerId%3D%22${userId}%22`,);
-    // console.log({apiUrl});
+    return this.http.get<Product[]>(`/api/data/catalog`);
   }
 
 }

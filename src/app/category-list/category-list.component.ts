@@ -9,15 +9,7 @@ import { ApiService } from '../api.service';
 export class CategoryListComponent implements OnInit {
   title = 'Smart Angular Crafts';
 
-  constructor(private apiService: ApiService) {
-  }
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
-    // this.apiService.getCategories(8).subscribe((themes) => {
-    //   console.log(themes);
-
-    // });
-  }
-} {
-
-}
+  ngOnInit(): void { }
+} 
