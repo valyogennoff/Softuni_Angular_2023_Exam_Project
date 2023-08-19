@@ -27,7 +27,18 @@
 
 ## App Images
 
+### Home Page
+
 ![home-page](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/d0dcf79d-10fe-44b8-a6b7-61db4855a072)
+
+### Product Page
 
 ![product-page](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/7ecd953e-8a24-442a-a3a2-94f6eff92e6b)
 
+### Profile Page
+
+![profile-page](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/7ea79e27-3ad4-4ea1-a08c-d0911036c073)
+
+### Create Product
+
+![create-new-product](https://github.com/valyogennoff/Softuni_Angular_2023_Exam_Project/assets/105722914/591c8f2c-d300-437a-975c-97c10522d97b)
