@@ -1,3 +1,5 @@
+<!-- <app-delete-confirmation-modal (confirmDelete)="deleteProductConfirmation()"> </app-delete-confirmation-modal> -->
+
 <main>
     <h2>My Profile</h2>
 
@@ -9,8 +11,6 @@
     <p>Username: <span>{{myUsername}}</span></p>
     <p>Email: <span>{{myEmail}}</span></p>
     <p>Country: <span>{{myCountry}}</span></p>
-    <!-- <p>Phone: <span>+597 645 824</span></p> -->
-    <p></p>
     <p></p>
     <p></p>
     <section class="admin">
@@ -78,7 +78,7 @@
     </div>
     <section class="profile-container">
         <ul *ngFor="let product of filteredProductList" class="profile-container-ul" role='list'>
-            
+
             <li class="profile-product-card-li">
                 <a routerLink="/products/{{product._id}}" class="home-popular-card-a">
                     <img src="{{product.img}}" alt="">
@@ -94,3 +94,4 @@
 
         </ul>
     </section>
+

@@ -61,23 +61,23 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  // openDeleteConfirmationModal(id: string): void {
-  //   const dialogRef = this.dialog.open(DeleteConfirmationModalComponent, {
-  //     width: '300px',
-  //   });
+  openDeleteConfirmationModal(id: string): void {
+    const dialogRef = this.dialog.open(DeleteConfirmationModalComponent, {
+      width: '300px',
+    });
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     if (result) {
-  //       // User confirmed the delete action
-  //       this.deleteProduct(id);
-  //     }
-  //   });
-  // }
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // User confirmed the delete action
+        this.deleteProduct(id);
+      }
+    });
+  }
 
-  // deleteProductConfirmation(): void {
-  //   // User confirmed the delete action
-  //   this.deleteProduct(this.productIdToDelete);
-  // }
+  deleteProductConfirmation(): void {
+    // User confirmed the delete action
+    this.deleteProduct(this.productIdToDelete);
+  }
 
 
 

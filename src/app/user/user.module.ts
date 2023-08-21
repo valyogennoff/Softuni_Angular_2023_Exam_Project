@@ -7,6 +7,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MinCountDirective } from './min-count.directive';
 import { SharedModule } from '../shared/shared.module';
+import { DeleteConfirmationModalComponent } from '../delete-confirmation-modal/delete-confirmation-modal.component';
 
 
 
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     RegisterComponent,
     ProfileComponent,
     MinCountDirective,
+    DeleteConfirmationModalComponent,
   ],
   imports: [
     CommonModule,

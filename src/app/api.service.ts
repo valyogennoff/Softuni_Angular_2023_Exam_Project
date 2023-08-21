@@ -11,11 +11,7 @@ export class ApiService {
 
   constructor(private http: HttpClient, private authService: AuthService,) { }
 
-  // getCategories(limit?: number) {
-  //   const { apiUrl } = environment;
-  //   const limitFilter = limit ? `?limit=${limit}` : '';
-  //   return this.http.get<Category[]>(`${apiUrl}/data/themes${limitFilter}`);
-  // }
+
   getProduct(id: string) {
     const { apiUrl } = environment;
     return this.http.get<Product>(`${apiUrl}/data/catalog/${id}`);

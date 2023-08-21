@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { Product } from '../../types/product';
-import { UserId } from 'src/app/types/user-id';
 
 @Component({
   selector: 'app-product-list',

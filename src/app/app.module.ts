@@ -18,14 +18,12 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { NewProductComponent } from './product/new-product/new-product.component';
 import { appInterceptorProvider } from './app.interceptor';
 import { FormsModule } from '@angular/forms';
-import { ProductModule } from './product/product.module';
-import { MinCountDirective } from './user/min-count.directive';
 import { MinDescrDirective } from './min-descr.directive';
-import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { SharedModule } from './shared/shared.module';
-import { SlicePipe } from '@angular/common';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { DeleteConfirmationModalComponent } from './delete-confirmation-modal/delete-confirmation-modal.component';
+// import { MinCountDirective } from './user/min-count.directive';
+// import { SlicePipe } from '@angular/common';
+// import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +36,7 @@ import { DeleteConfirmationModalComponent } from './delete-confirmation-modal/de
     NewProductComponent,
     MinDescrDirective,
     NotFoundComponent,
-    DeleteConfirmationModalComponent,
+
     // MinCountDirective
   ],
   imports: [
